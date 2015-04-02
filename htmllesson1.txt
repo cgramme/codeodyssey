@@ -1,0 +1,13 @@
+<div class="main-content">
+			<h2>HTML lesson 1</h2>
+			<h4>HTML is an acronym for "Hyper Text Markup Language" and consists of tags like this &lt;html&gt;.<br>There are a variety of HTML tags and they each define thier own content.<br>Below is an example of a very simple website.</h4>
+			<h4 class="code">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;/head>
+&lt;body>
+Hello World
+&lt;/body>
+&lt;/html></h4>
+			<button>Next: HTML lesson 2</button>
+		</div>

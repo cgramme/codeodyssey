@@ -1,0 +1,107 @@
+html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif; }
+
+html, body {
+  font-size: 62.5%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000; }
+
+div.header {
+  background: #000;
+  width: 100%;
+  box-shadow: 0 0 15px 0 #000; }
+  div.header h1 {
+    color: #fff;
+    padding: 10px;
+    font-size: 5em; }
+
+div.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  box-shadow: 0 0 15px 0 #000; }
+  div.footer h2 {
+    color: #fff;
+    margin: 10px; }
+
+div.wrapper {
+  width: 1200px;
+  height: 500px;
+  margin: 10px auto;
+  padding: 10px; }
+  div.wrapper div.side-menu {
+    float: left;
+    width: 240px;
+    height: 100%;
+    background: #03467A;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 15px 0 #000;
+    border: 2px solid #999; }
+    div.wrapper div.side-menu h4 {
+      font-size: 2.5em; }
+    div.wrapper div.side-menu ul {
+      list-style-type: none; }
+      div.wrapper div.side-menu ul li {
+        padding: 5px; }
+        div.wrapper div.side-menu ul li div {
+          border-radius: 5px;
+          background: #060F15;
+          color: #555;
+          font-size: 3em;
+          padding: 5px;
+          box-shadow: 2px 2px 2px #000; }
+  div.wrapper div.main-content {
+    float: right;
+    width: 900px;
+    height: 500px;
+    background: -webkit-linear-gradient(#111, #222);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#111, #222);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#111, #222);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#111, #222);
+    /* Standard syntax */
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 15px 0 #000;
+    border: 2px solid #999; }
+    div.wrapper div.main-content h2 {
+      color: #2781C6;
+      text-shadow: 2px 2px 2px #000;
+      font-size: 5em;
+      font-weight: bold; }
+    div.wrapper div.main-content h3 {
+      color: #fff;
+      font-size: 3.5em;
+      margin-top: 50px; }
+    div.wrapper div.main-content h4 {
+      color: #ddd;
+      font-size: 2.5em; }
+    div.wrapper div.main-content button {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background: #060F15;
+      color: #555;
+      box-shadow: 2px 2px 5px 0 #000; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+/*# sourceMappingURL=main.css.map */
