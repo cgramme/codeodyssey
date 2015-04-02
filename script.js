@@ -20,7 +20,7 @@ $(document).ready(function(){
 		xmlhttp.send();
 	}
 
-	$('button').click(function() {
+	$('#next-lesson').click(function() {
   	loadXMLDoc("htmltutorial1.txt","change-content");
 	});
 
