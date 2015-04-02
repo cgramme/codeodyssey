@@ -1,7 +1,12 @@
-
+var currentLesson;
 
 
 $(document).ready(function(){
+
+	currentLesson = $('#current-lesson').html();
+	var lesson = currentLesson.replace(/[^0-9]/g, '');
+	var lessonNumber = parseInt(lesson, 10)+1;
+	alert(lessonNumber);
 
 
 	function loadXMLDoc(url, elementId){
@@ -21,7 +26,7 @@ $(document).ready(function(){
 	}
 
 	$('#next-lesson').click(function() {
-  	loadXMLDoc("htmllesson1.txt","change-content");
+  	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
 	});
 
 

@@ -1,0 +1,12 @@
+<h2 id="current-lesson">HTML lesson 2</h2>
+			<h4>Now that you have an idea of what a basic HTML document looks like let's go over some common HTML tags.<br>Remember the basic structure of a tag &lt;tagname>the content of the tag&lt;/tagname>.<br>Tags are always opened with the tag surrounded by less than and greater than symbols &lt; &gt;.<br>Now that we know how to open a tag we now need to close it. Tags are closed in a very similar fashion as opening them. &lt/ &gt;.<br>Here is an example of a title tag which will display any content entered for the page title in the thumbnail of a page.</h4>
+			<h4 class="code">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>My Awesome Page Title&lt;/title>	<----This is the title tag
+&lt;/head>
+&lt;body>
+Hello World
+&lt;/body>
+&lt;/html></h4>
+			<button id="next-lesson">Next: HTML lesson 3</button>
