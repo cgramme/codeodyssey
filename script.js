@@ -21,7 +21,7 @@ $(document).ready(function(){
 	}
 
 	$('#next-lesson').click(function() {
-  	loadXMLDoc("htmltutorial1.txt","change-content");
+  	loadXMLDoc("htmllesson1.txt","change-content");
 	});
 
 
