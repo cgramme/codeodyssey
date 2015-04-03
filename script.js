@@ -4,7 +4,10 @@ var lessonNumber;
 
 $(document).ready(function(){
 	
-	getLessonNumber();
+	currentLesson = $('#current-lesson').html();
+	var lesson = currentLesson.replace(/[^0-9]/g, '');
+	lessonNumber = parseInt(lesson, 10)+1;
+	alert(lessonNumber);
 
 	function loadXMLDoc(url, elementId){
 		var xmlhttp;
@@ -16,8 +19,6 @@ $(document).ready(function(){
 		xmlhttp.onreadystatechange=function(){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
-    				alert("boobs");
-    				getLessonNumber();
    			 }
   		}
 		xmlhttp.open("GET",url,true);
@@ -30,10 +31,3 @@ $(document).ready(function(){
 
 
 });
-
-function getLessonNumber(){
-	currentLesson = $('#current-lesson').html();
-	var lesson = currentLesson.replace(/[^0-9]/g, '');
-	lessonNumber = parseInt(lesson, 10)+1;
-	alert(lessonNumber);
-}
