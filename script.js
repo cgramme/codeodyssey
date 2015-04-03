@@ -18,8 +18,8 @@ function loadXMLDoc(url, elementId){
 		xmlhttp.onreadystatechange=function(){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
-    				lessonNumber++;
-   			 }else if (xmlhttp.status==404){
+    				updateLessonNumber();
+   			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
    			 }
   		}
@@ -32,10 +32,7 @@ $('#next-lesson').click(function() {
 });
 
 $('ul li').on('click', function() {
-
-    alert($(this).index()+1);
     loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
-
 });
 
 function updateLessonNumber(){
