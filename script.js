@@ -25,10 +25,12 @@ $(document).ready(function(){
 		xmlhttp.send();
 	}
 
-	$('#next-lesson').click(function() {
-		alert("boomers");
-  	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
-	});
+
 
 
 });
+
+$('#next-lesson').click(function() {
+		alert("boomers");
+  	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+	});
