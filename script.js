@@ -9,7 +9,14 @@ $(document).ready(function(){
 	lessonNumber = parseInt(lesson, 10)+1;
 	alert(lessonNumber);
 
-	function loadXMLDoc(url, elementId){
+	
+
+
+
+
+});
+
+function loadXMLDoc(url, elementId){
 		var xmlhttp;
 		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
  			 xmlhttp=new XMLHttpRequest();
@@ -23,14 +30,9 @@ $(document).ready(function(){
   		}
 		xmlhttp.open("GET",url,true);
 		xmlhttp.send();
-	}
-
-
-
-
-});
+}
 
 $('#next-lesson').click(function() {
-		alert("boomers");
+	alert("boomers");
   	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
-	});
+});
