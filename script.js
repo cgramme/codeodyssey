@@ -50,7 +50,7 @@ function updateLessonNumber(){
 
 
 
-$('.footer').on('click', function() {
+$('.code').on('click', function() {
 	var info = $('#code-example').html();
 	var w = window.open();
 	alert(info);
