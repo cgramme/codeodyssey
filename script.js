@@ -20,7 +20,7 @@ function loadXMLDoc(url, elementId){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
     				updateLessonNumber();
     				 
-      			$('#code-example').html(elementId);
+      			$('#code-example').html();
    
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
