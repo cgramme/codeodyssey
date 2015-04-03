@@ -1,4 +1,5 @@
 var currentLesson;
+var lessonNumber;
 
 
 $(document).ready(function(){
@@ -33,6 +34,6 @@ $(document).ready(function(){
 function getLessonNumber(){
 	currentLesson = $('#current-lesson').html();
 	var lesson = currentLesson.replace(/[^0-9]/g, '');
-	var lessonNumber = parseInt(lesson, 10)+1;
+	lessonNumber = parseInt(lesson, 10)+1;
 	alert(lessonNumber);
 }
