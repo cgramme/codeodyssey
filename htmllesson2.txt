@@ -9,4 +9,3 @@
 Hello World
 &lt;/body>
 &lt;/html></h4>
-			<button id="next-lesson">Next: HTML lesson 3</button>
