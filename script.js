@@ -21,7 +21,7 @@ function loadXMLDoc(url, elementId){
     				updateLessonNumber();
     				 
       			$('#change-content').html();
-      			$
+      			$('.code').html();
    
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
