@@ -26,6 +26,10 @@ function loadXMLDoc(url, elementId){
 		xmlhttp.onreadystatechange=function(){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
+    				currentLesson = $('#current-lesson').html();
+					var lesson = currentLesson.replace(/[^0-9]/g, '');
+					lessonNumber = parseInt(lesson, 10)+1;
+					alert(lessonNumber+"update");
    			 }
   		}
 		xmlhttp.open("GET",url,true);
