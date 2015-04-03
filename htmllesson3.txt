@@ -10,4 +10,3 @@
 	&lth1>My first Website!&lt;/h1>	<----This is the h1 tag
 &lt;/body>
 &lt;/html></h4>
-			<button id="next-lesson">Next: HTML lesson 4</button>

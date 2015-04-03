@@ -1,5 +1,5 @@
 <h2 id="current-lesson">HTML lesson 1</h2>
-			<h4>HTML is an acronym for "HyperText Markup Language" and consists of tags like this &lt;html&gt;.<br>There are a variety of HTML tags and they each define thier own content.<br>Below is an example of a very simple website.</h4>
+			<h4>HTML is an acronym for "Hyper Text Markup Language" and consists of tags like this &lt;html&gt;.<br>There are a variety of HTML tags and they each define thier own content.<br>Below is an example of a very simple website.</h4>
 			<h4 class="code">&lt;!DOCTYPE html>
 &lt;html>
 &lt;head>
@@ -8,4 +8,3 @@
 Hello World
 &lt;/body>
 &lt;/html></h4>
-			<button id="next-lesson">Next: HTML lesson 2</button>
