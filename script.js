@@ -2,12 +2,8 @@ var currentLesson;
 
 
 $(document).ready(function(){
-
-	currentLesson = $('#current-lesson').html();
-	var lesson = currentLesson.replace(/[^0-9]/g, '');
-	var lessonNumber = parseInt(lesson, 10)+1;
-	alert(lessonNumber);
-
+	
+	getLessonNumber();
 
 	function loadXMLDoc(url, elementId){
 		var xmlhttp;
@@ -23,6 +19,7 @@ $(document).ready(function(){
   		}
 		xmlhttp.open("GET",url,true);
 		xmlhttp.send();
+		getLessonNumber();
 	}
 
 	$('#next-lesson').click(function() {
@@ -31,3 +28,10 @@ $(document).ready(function(){
 
 
 });
+
+function getLessonNumber(){
+	currentLesson = $('#current-lesson').html();
+	var lesson = currentLesson.replace(/[^0-9]/g, '');
+	var lessonNumber = parseInt(lesson, 10)+1;
+	alert(lessonNumber);
+}
