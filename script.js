@@ -19,9 +19,6 @@ function loadXMLDoc(url, elementId){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
     				updateLessonNumber();
-    				 
-      			$('#change-content').html();
-      			$('.code').html();
    
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
@@ -45,21 +42,22 @@ function updateLessonNumber(){
 		var lesson = currentLesson.replace(/[^0-9]/g, '');
 		lessonNumber = parseInt(lesson, 10)+1;
 	}
+	$('.code').on('click', function() {
+		exampleCode();
+	});
 }
 
-
-
-
-$('.code').on('click', function() {
+function exampleCode(){
 	var info = $('#code-example').html();
-	var w = window.open();
-	alert(info);
-    $(w.document.body).html(info);
 	if(typeof info != 'undefined'){
-		
+		var w = window.open();
+    	$(w.document.body).html(info);
 	}
+}
 
-});
+$('.footer').on('click', function() {
+		exampleCode();
+	});
 
 
 
