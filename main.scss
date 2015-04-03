@@ -73,6 +73,7 @@ div.wrapper {
 
             li {
                 padding: 5px;
+                cursor: pointer;
 
                 div {
                     border-radius: 5px;
@@ -117,6 +118,7 @@ div.wrapper {
             background: #060F15;
             color: #555;
             box-shadow: 2px 2px 5px 0 #000;
+            cursor: pointer;
         }
     }
 }

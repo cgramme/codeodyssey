@@ -54,7 +54,8 @@ div.wrapper {
     div.wrapper div.side-menu ul {
       list-style-type: none; }
       div.wrapper div.side-menu ul li {
-        padding: 5px; }
+        padding: 5px;
+        cursor: pointer; }
         div.wrapper div.side-menu ul li div {
           border-radius: 5px;
           background: #060F15;
@@ -96,7 +97,8 @@ div.wrapper {
       border-radius: 5px;
       background: #060F15;
       color: #555;
-      box-shadow: 2px 2px 5px 0 #000; }
+      box-shadow: 2px 2px 5px 0 #000;
+      cursor: pointer; }
 
 .left {
   float: left; }
