@@ -15,11 +15,12 @@ $(document).ready(function(){
 		xmlhttp.onreadystatechange=function(){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
+    				alert("boobs");
+    				getLessonNumber();
    			 }
   		}
 		xmlhttp.open("GET",url,true);
 		xmlhttp.send();
-		getLessonNumber();
 	}
 
 	$('#next-lesson').click(function() {
