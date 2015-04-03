@@ -19,7 +19,9 @@ function loadXMLDoc(url, elementId){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
     				updateLessonNumber();
-    				elementId.load();
+    				 
+      			$('#code-example').html(elementId);
+   
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
    			 }
@@ -47,8 +49,8 @@ function updateLessonNumber(){
 
 
 
-$('.code').on('click', function() {
-
+$('.footer').on('click', function() {
+	alert('boobs');
 	var html = $('#code-example').html();
 	var w = window.open();
     $(w.document.body).html(html);
