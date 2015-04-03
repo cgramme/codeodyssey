@@ -46,11 +46,15 @@ function updateLessonNumber(){
 
 
 
-/*$('.code').on('click', function() {
-    var w = window.open();
-    var html = $("#toNewWindow").html();
-    $(w.document.body).html(html);
+$('.code').on('click', function() {
+
+	var html = $('#code-example').html();
+	if(typeof html != 'undefined'){
+		var w = window.open();
+    	$(w.document.body).html(html);
+	}
+
 });
 
-*/
+
 
