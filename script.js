@@ -26,6 +26,7 @@ $(document).ready(function(){
 	}
 
 	$('#next-lesson').click(function() {
+		alert("boomers");
   	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
 	});
 
