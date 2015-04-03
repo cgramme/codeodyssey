@@ -1,0 +1,13 @@
+<h2 id="current-lesson">HTML lesson 3</h2>
+			<h4>Tags are the building blocks of HTML so let's check out some popular ones. We will start with the "heading" tag. Headings are used for text content and can define different text sizes and boldness. The largest heading tag looks like &lt;h1&gt;content&lt;/h1&gt;. Heading tags are numbered from 1 being the largest and scale down in size from 1, 2, 3, 4, 5, 6 ect... The larger usually being used for page title and smaller headings for page content.</h4>
+			<h4>Lets replace the "Hello World" with an h1 tag for the title</h4>
+			<h4 class="code">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>My Awesome Page Title&lt;/title>
+&lt;/head>
+&lt;body>
+	&lth1>My first Website!&lt;/h1>	<----This is the h1 tag
+&lt;/body>
+&lt;/html></h4>
+			<button id="next-lesson">Next: HTML lesson 4</button>
