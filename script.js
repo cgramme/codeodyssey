@@ -36,7 +36,6 @@ $('ul li').on('click', function() {
 });
 
 function updateLessonNumber(){
-	location.reload();
 	currentLesson = $('#current-lesson').html();
 	if(typeof currentLesson != 'undefined'){
 		var lesson = currentLesson.replace(/[^0-9]/g, '');
@@ -48,7 +47,7 @@ function updateLessonNumber(){
 
 
 $('.code').on('click', function() {
-
+	location.reload();
 	var html = $('#code-example').html();
 	if(typeof html != 'undefined'){
 		var w = window.open();
