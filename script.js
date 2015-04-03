@@ -50,11 +50,11 @@ function updateLessonNumber(){
 
 
 $('.footer').on('click', function() {
-	alert('boobs');
-	var html = $('#code-example').html();
+	var info = $('#code-example').html();
 	var w = window.open();
-    $(w.document.body).html(html);
-	if(typeof html != 'undefined'){
+	alert(info);
+    $(w.document.body).html(info);
+	if(typeof info != 'undefined'){
 		
 	}
 
