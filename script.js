@@ -4,7 +4,7 @@ var lessonNumber;
 
 $(document).ready(function(){
 	
-
+	updateLessonNumber();
 
 });
 
