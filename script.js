@@ -37,6 +37,20 @@ $('ul li').on('click', function() {
 
 function updateLessonNumber(){
 	currentLesson = $('#current-lesson').html();
-	var lesson = currentLesson.replace(/[^0-9]/g, '');
-	lessonNumber = parseInt(lesson, 10)+1;
+	if(typeof currentLesson != 'undefined'){
+		var lesson = currentLesson.replace(/[^0-9]/g, '');
+		lessonNumber = parseInt(lesson, 10)+1;
+	}
 }
+
+
+
+
+/*$('.code').on('click', function() {
+    var w = window.open();
+    var html = $("#toNewWindow").html();
+    $(w.document.body).html(html);
+});
+
+*/
+

@@ -6,15 +6,6 @@ html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p, button{
     font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
     
 }
-html, body {
-    font-size: 62.5%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #000;
-}
 
 @mixin linear-gradient($params...) {
       background: -webkit-linear-gradient($params); /* For Safari 5.1 to 6.0 */
@@ -23,10 +14,22 @@ html, body {
       background: linear-gradient($params); /* Standard syntax */
 }
 
+html, body {
+    font-size: 62.5%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include linear-gradient(90deg, #000, #fff);
+}
+
+
 div.header {
     background: #000;
     width: 100%;
     box-shadow: 0 0 15px 0 #000;
+    border-bottom: 1px solid #999;
     h1 {
         color: #fff;
         padding: 10px;
@@ -41,6 +44,7 @@ div.footer {
     background: #000;
     width: 100%;
     box-shadow: 0 0 15px 0 #000;
+    border-top: 1px solid #999;
     h2 {
         color: #fff;
         margin: 10px;
@@ -148,4 +152,7 @@ div.wrapper {
 }
 .indent {
     text-indent: 3em;
+}
+.sample-code {
+    display: none;
 }
