@@ -19,7 +19,7 @@ function loadXMLDoc(url, elementId){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
     				updateLessonNumber();
-    				$('#code-example').load();
+    				elementId.load();
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
    			 }
