@@ -12,13 +12,13 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: -webkit-linear-gradient(90deg, #000, #fff);
+  background: -webkit-linear-gradient(90deg, #000, #555);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(90deg, #000, #fff);
+  background: -o-linear-gradient(90deg, #000, #555);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(90deg, #000, #fff);
+  background: -moz-linear-gradient(90deg, #000, #555);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(90deg, #000, #fff);
+  background: linear-gradient(90deg, #000, #555);
   /* Standard syntax */ }
 
 div.header {
@@ -49,65 +49,46 @@ div.wrapper {
   margin: 10px auto;
   padding: 10px; }
   div.wrapper div.side-menu {
-    float: left;
-    width: 240px;
-    height: 100%;
-    background: #03467A;
+    margin-top: 50px;
     text-align: center;
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 2px 2px 15px 0 #000;
-    border: 2px solid #999; }
+    padding: 10px; }
     div.wrapper div.side-menu h4 {
-      font-size: 2.5em; }
+      font-size: 5em;
+      color: #fff; }
     div.wrapper div.side-menu ul {
-      list-style-type: none; }
+      list-style-type: none;
+      margin-top: 50px; }
       div.wrapper div.side-menu ul li {
-        padding: 5px;
-        cursor: pointer; }
+        padding: 10px 20px 10px 20px;
+        display: inline-block; }
         div.wrapper div.side-menu ul li div {
+          margin: 0 auto;
+          height: 200px;
+          width: 300px;
           border-radius: 5px;
-          background: #060F15;
-          color: #555;
+          background: #03467A;
           font-size: 3em;
           padding: 5px;
-          box-shadow: 2px 2px 2px #000; }
+          box-shadow: 2px 2px 2px #000;
+          cursor: pointer;
+          display: table-cell;
+          vertical-align: middle; }
+          div.wrapper div.side-menu ul li div p {
+            color: #ddd;
+            text-shadow: 2px 2px 2px #000;
+            pointer-events: none; }
   div.wrapper div.main-content {
-    float: right;
-    width: 900px;
-    height: 500px;
-    background: -webkit-linear-gradient(#111, #222);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#111, #222);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#111, #222);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#111, #222);
-    /* Standard syntax */
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 2px 2px 15px 0 #000;
-    border: 2px solid #999; }
-    div.wrapper div.main-content h2 {
-      color: #2781C6;
-      text-shadow: 2px 2px 2px #000;
-      font-size: 5em;
-      font-weight: bold; }
-    div.wrapper div.main-content h3 {
-      color: #fff;
-      font-size: 3.5em;
-      margin-top: 50px; }
-    div.wrapper div.main-content h4 {
-      color: #ddd;
-      font-size: 2.5em; }
-    div.wrapper div.main-content button {
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      background: #060F15;
-      color: #555;
-      box-shadow: 2px 2px 5px 0 #000;
-      cursor: pointer; }
+    overflow: hidden; }
+    div.wrapper div.main-content .text-slide {
+      position: relative; }
+      div.wrapper div.main-content .text-slide h2 {
+        color: #2781C6;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 5em;
+        font-weight: bold; }
+      div.wrapper div.main-content .text-slide h4 {
+        color: #ddd;
+        font-size: 2.5em; }
 
 .left {
   float: left; }

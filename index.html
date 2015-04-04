@@ -3,7 +3,7 @@
 <head>
 	<title>Code Odyssey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
-    <link rel="stylesheet" href="htmltutorial.css" />
+    <link rel="stylesheet" href="main.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Raleway:400,300,700'rel='stylesheet' type='text/css'/>
 </head>
 <body>
@@ -11,26 +11,19 @@
 		<h1 onclick="location.href='index.html'">Code Odyssey</h1>
 	</div>
 	<div class="wrapper">
-		<div class="side-menu">
-			<h4>Learn HTML</h4>
-			<ul>
-				<li><div>Lesson 1</div></li>
-				<li><div>Lesson 2</div></li>
-				<li><div>Lesson 3</div></li>
-				<li><div>Lesson 4</div></li>
-				<li><div>Lesson 5</div></li>
-				<li><div>Lesson 6</div></li>
-				<li><div>Lesson 7</div></li>
-				<li><div>Lesson 8</div></li>
-				<li><div>Lesson 9</div></li>
-				<li><div>Lesson 10</div></li>
-			</ul>
-		</div>
 		<div class="main-content">
-			<h2>Welcome to Code Odyssey!<br>Where your web-development journey begins.</h2>
-			<h4>Code Odyssey makes learning web-development easy and fun, through step by step tutorials.</h4>
-			<h3>The basic web language that all browsers use is HTML, so lets get started.</h3>
-			<button onclick="location.href='htmltutorial.html'">Start HTML lesson 1</button>
+			<div class="text-slide">
+				<h2>Welcome to Code Odyssey!<br>Where your web-development journey begins.</h2>
+				<h4>Code Odyssey makes learning web-development easy and fun, through step by step tutorials.</h4>
+			</div>
+		</div>
+		<div class="side-menu">
+			<h4>Start learning now</h4>
+			<ul>
+				<li><div class="html-basics" onclick="location.href='htmltutorial.html'"><p>HTML Basics</p></div></li>
+				<li><div class="html-intermediate"><p>HTML Intermediate</p></div></li>
+				<li><div class="css-basics"><p>CSS Basics</p></div></li>
+			</ul>
 		</div>
 	</div>
 	<div class="footer" onclick="window.open('http://cgramme.github.io/personal')">
@@ -40,6 +33,6 @@
 
 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
-    <script type='text/javascript' src='script.js'></script>
+    <script type='text/javascript' src='script_home.js'></script>
 </body>
 </html>

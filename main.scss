@@ -21,7 +21,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    @include linear-gradient(90deg, #000, #fff);
+    @include linear-gradient(90deg, #000, #555);
 }
 
 div.header {
@@ -57,72 +57,60 @@ div.wrapper {
     padding: 10px;
 
     div.side-menu {
-        float: left;
-        width: 240px;
-        height: 100%;
-        background: #03467A;
+        margin-top: 50px;
         text-align: center;
-        border-radius: 20px;
         padding: 10px;
-        box-shadow: 2px 2px 15px 0 #000;
-        border: 2px solid #999;
 
         h4 {
-            font-size: 2.5em;
+            font-size: 5em;
+            color: #fff;
         }
 
         ul {
             list-style-type: none;
+            margin-top: 50px;
 
             li {
-                padding: 5px;
-                cursor: pointer;
+                padding: 10px 20px 10px 20px;
+                display: inline-block;
 
                 div {
+                    margin: 0 auto;
+                    height: 200px;
+                    width: 300px;
                     border-radius: 5px;
-                    background: #060F15;
-                    color: #555;
+                    background: #03467A;
                     font-size: 3em;
                     padding: 5px;
                     box-shadow: 2px 2px 2px #000;
+                    cursor: pointer;
+                    display: table-cell;
+                    vertical-align: middle;
+                    p {
+                        color: #ddd;
+                        text-shadow: 2px 2px 2px #000;
+                        pointer-events: none;
+                    }
                 }
             }
         }
     }
     div.main-content {
-        float: right;
-        width: 900px;
-        height: 500px;
-        @include linear-gradient(#111, #222);
-        border-radius: 20px;
-        padding: 10px;
-        box-shadow: 2px 2px 15px 0 #000;
-        border: 2px solid #999;
-
-        h2 {
+        overflow: hidden;
+        .text-slide {
+            position: relative;
+            h2 {
             color: #2781C6;
             text-shadow: 2px 2px 2px #000;
             font-size: 5em;
             font-weight: bold;
+            }
+            h4 {
+                color: #ddd;
+                font-size: 2.5em;
+            }
         }
-        h3 {
-            color: #fff;
-            font-size: 3.5em;
-            margin-top: 50px;
-        }
-        h4 {
-            color: #ddd;
-            font-size: 2.5em;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            background: #060F15;
-            color: #555;
-            box-shadow: 2px 2px 5px 0 #000;
-            cursor: pointer;
-        }
+
     }
 }
 
