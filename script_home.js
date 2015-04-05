@@ -1,8 +1,8 @@
 
 
-
+//Document is loaded
 $(document).ready(function(){
-	
+	//HTML Basics click to start course
 	$('.html-basics').mouseover(function() {
 		$('.html-basics').find('p').fadeOut(200, function(){
 			$(this).fadeIn(200).html("Learn basic knowledge of the foundational web language.");
@@ -12,7 +12,7 @@ $(document).ready(function(){
 			$(this).fadeIn(200).html("HTML Basics");
 		});
     });
-
+	//HTML Intermediate click to start course
     $('.html-intermediate').mouseover(function() {
 		$('.html-intermediate').find('p').fadeOut(200, function(){
 			$(this).fadeIn(200).html("Take your basic HTML to the next level with the HTML intermediate guide.");
@@ -22,7 +22,7 @@ $(document).ready(function(){
 			$(this).fadeIn(200).html("HTML Intermediate");
 		});
     });
-
+	//CSS Basics click to start course
     $('.css-basics').mouseover(function() {
 		$('.css-basics').find('p').fadeOut(200, function(){
 			$(this).fadeIn(200).html("Take control of you HTML with this basic CSS course.");
@@ -33,11 +33,11 @@ $(document).ready(function(){
 		});
     });
 
-
+	//Start Welcome and course recommendation sliding text
 	slideText();
 
 });
-
+//Welcome text and recommendations for courses animated sliding text
 function slideText(){
      $('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
      	$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
