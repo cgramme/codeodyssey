@@ -44,18 +44,14 @@ function loadXMLDoc(url, elementId){
 }
 
 $('#next-lesson').click(function() {
-	flipAnimation().delay(500, function(){
-		loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
-	});
-  	
+	flipAnimation();
+  	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
   	
 });
 
 $('ul li').on('click', function() {
-	flipAnimation().delay(500, function(){
-		loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
-	});
-    
+	flipAnimation();
+    loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
    
 });
 
