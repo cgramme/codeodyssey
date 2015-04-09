@@ -24,6 +24,10 @@ $(document).ready(function(){
 
 // AJAX request for loading lessons
 function loadXMLDoc(url, elementId){
+		$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
+			  perspective: '1000px',
+			  rotateX: '-90deg'
+			},500);
 		var xmlhttp;
 		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
  			 xmlhttp=new XMLHttpRequest();
@@ -34,6 +38,10 @@ function loadXMLDoc(url, elementId){
   			if (xmlhttp.readyState==4 && xmlhttp.status==200){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
     				updateLessonNumber();
+    				$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
+			  perspective: '0px',
+			  rotateX: '0deg'
+			},500);
    
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");
@@ -44,13 +52,11 @@ function loadXMLDoc(url, elementId){
 }
 
 $('#next-lesson').click(function() {
-	flipAnimation();
   	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
   	
 });
 
 $('ul li').on('click', function() {
-	flipAnimation();
     loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
    
 });
@@ -82,17 +88,7 @@ $('.footer').on('click', function() {
 		exampleCode();
 	});
 
-function flipAnimation(){
-	$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
-			  perspective: '1000px',
-			  rotateX: '-90deg'
-			},500, function(){
-				$('#change-content').transition({
-					  perspective: '2000px',
-					  rotateX: '0deg'
-					},500);
-			});
-}
+
 
 $(window).resize(function(){
 	mainContentWidth = $('.main-content').width();
