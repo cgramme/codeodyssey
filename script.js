@@ -86,11 +86,11 @@ function flipAnimation(){
 	$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
 			  perspective: '1000px',
 			  rotateX: '-90deg'
-			},500, function(){
+			},200, function(){
 				$('#change-content').transition({
 					  perspective: '2000px',
 					  rotateX: '0deg'
-					},500);
+					},200);
 			});
 }
 
