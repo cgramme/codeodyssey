@@ -44,14 +44,18 @@ function loadXMLDoc(url, elementId){
 }
 
 $('#next-lesson').click(function() {
-	flipAnimation();
-  	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+	flipAnimation().delay(500, function(){
+		loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+	});
+  	
   	
 });
 
 $('ul li').on('click', function() {
-	flipAnimation();
-    loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
+	flipAnimation().delay(500, function(){
+		loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
+	});
+    
    
 });
 
@@ -86,11 +90,11 @@ function flipAnimation(){
 	$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
 			  perspective: '1000px',
 			  rotateX: '-90deg'
-			},200, function(){
+			},500, function(){
 				$('#change-content').transition({
 					  perspective: '2000px',
 					  rotateX: '0deg'
-					},200);
+					},500);
 			});
 }
 
