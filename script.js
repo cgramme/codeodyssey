@@ -44,13 +44,15 @@ function loadXMLDoc(url, elementId){
 }
 
 $('#next-lesson').click(function() {
+	flipAnimation();
   	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
-  	flipAnimation();
+  	
 });
 
 $('ul li').on('click', function() {
+	flipAnimation();
     loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
-    flipAnimation();
+   
 });
 
 function updateLessonNumber(){
