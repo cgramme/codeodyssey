@@ -59,7 +59,7 @@ function updateLessonNumber(){
 		var lesson = currentLesson.replace(/[^0-9]/g, '');
 		lessonNumber = parseInt(lesson, 10)+1;
 		if(isNaN(lessonNumber)){
-			lessonNumber = 0;
+			lessonNumber = 1;
 		}
 	}
 	
