@@ -3,35 +3,61 @@
 //Document is loaded
 $(document).ready(function(){
 	//HTML Basics click to start course
-	$('.html-basics').mouseover(function() {
-		$('.html-basics').find('p').fadeOut(200, function(){
-			$(this).fadeIn(200).html("Learn basic knowledge of the foundational web language.");
-		});
+	
+    $('.html-basics').mouseover(function() {
+		$('.html-basics').find('p').transition({
+			  perspective: '500px',
+			  rotateY: '-90deg',
+			  rotateX: '-90deg'
+			},200, function(){
+				$('.html-basics').find('p').html("Learn the basic principles of the foundational web language HTML.");
+				$('.html-basics').find('p').transition({
+			 		 perspective: '500px',
+			  		 rotateY: '0deg',
+			  		 rotateX: '0deg'
+				},200);
+			}
+		);
 	}).mouseout(function() {
-		$(this).find('p').fadeOut(200, function(){
-			$(this).fadeIn(200).html("HTML Basics");
-		});
+		$('.html-basics').find('p').html("HTML Basics");
     });
 	//HTML Intermediate click to start course
     $('.html-intermediate').mouseover(function() {
-		$('.html-intermediate').find('p').fadeOut(200, function(){
-			$(this).fadeIn(200).html("Take your basic HTML to the next level with the HTML intermediate guide.");
-		});
+		$('.html-intermediate').find('p').transition({
+			  perspective: '500px',
+			  rotateY: '-90deg',
+			  rotateX: '-90deg'
+			},200, function(){
+				$('.html-intermediate').find('p').html("Take your basic knowledge of HTML to the next level with this HTML intermediate guide.");
+				$('.html-intermediate').find('p').transition({
+			 		 perspective: '500px',
+			  		 rotateY: '0deg',
+			  		 rotateX: '0deg'
+				},200);
+			}
+		);
 	}).mouseout(function() {
-		$(this).find('p').fadeOut(200, function(){
-			$(this).fadeIn(200).html("HTML Intermediate");
-		});
+		$('.html-intermediate').find('p').html("HTML Intermediate");
     });
 	//CSS Basics click to start course
-    $('.css-basics').mouseover(function() {
-		$('.css-basics').find('p').fadeOut(200, function(){
-			$(this).fadeIn(200).html("Take control of you HTML with this basic CSS course.");
-		});
+	$('.css-basics').mouseover(function() {
+		$('.css-basics').find('p').transition({
+			  perspective: '500px',
+			  rotateY: '-90deg',
+			  rotateX: '-90deg'
+			},200, function(){
+				$('.css-basics').find('p').html("Add style to your HTML with this CSS basics course.");
+				$('.css-basics').find('p').transition({
+			 		 perspective: '500px',
+			  		 rotateY: '0deg',
+			  		 rotateX: '0deg'
+				},200);
+			}
+		);
 	}).mouseout(function() {
-		$(this).find('p').fadeOut(200, function(){
-			$(this).fadeIn(200).html("CSS Basics");
-		});
+		$('.css-basics').find('p').html("CSS Basics");
     });
+    
 
 	//Start Welcome and course recommendation sliding text
 	slideText();
@@ -42,16 +68,19 @@ function slideText(){
      $('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
      	$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
      		$('.text-slide').find('h2').html("Are you just starting out?<br> Try our HTML Basics course.");
-     		$('.text-slide').find('h4').text("Start from where most web developers started.");
      		$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
      			$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
      				$('.text-slide').find('h2').html("Need something more advanced?<br>Check out the CSS Intermediate course.");
-     				$('.text-slide').find('h4').text("Learn advanced techniques for styling your CSS.");
      				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
      					$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
-		     				$('.text-slide').find('h2').html("Welcome to Code Odyssey!<br>Where your web-development journey begins.");
-		     				$('.text-slide').find('h4').text("Code Odyssey makes learning web-development easy and fun, through step by step tutorials.");
-		     				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, slideText());
+		     				$('.text-slide').find('h2').html("All access granted intermediately.<br>Skip ahead, review, or learn only what you want.");
+		     				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
+		     					$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
+				     				$('.text-slide').find('h2').html("All our courses are completely free!<br>Learn at your own pace.");
+				     				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, slideText());
+				     			});
+
+			     			});
 		     			});
      				});
      			});

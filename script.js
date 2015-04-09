@@ -1,13 +1,28 @@
-var currentLesson;
-var lessonNumber;
+var currentLesson, mainContentWidth, lessonNumber;
 
+$(window).load(function(){
+	$(".scroll-pane").jScrollPane({
+		showArrows: true
+	});
+	mainContentWidth = $('.main-content').width();
+});
 
 $(document).ready(function(){
 	
+	
+
 	updateLessonNumber();
+
+
+	
+	
+	
+
 
 });
 
+
+// AJAX request for loading lessons
 function loadXMLDoc(url, elementId){
 		var xmlhttp;
 		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -30,10 +45,12 @@ function loadXMLDoc(url, elementId){
 
 $('#next-lesson').click(function() {
   	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+  	flipAnimation();
 });
 
 $('ul li').on('click', function() {
     loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
+    flipAnimation();
 });
 
 function updateLessonNumber(){
@@ -41,12 +58,16 @@ function updateLessonNumber(){
 	if(typeof currentLesson != 'undefined'){
 		var lesson = currentLesson.replace(/[^0-9]/g, '');
 		lessonNumber = parseInt(lesson, 10)+1;
+		if(isNaN(lessonNumber)){
+			lessonNumber = 0;
+		}
 	}
+	
 	$('.code').on('click', function() {
 		exampleCode();
 	});
 }
-
+//Open example code in new window
 function exampleCode(){
 	var info = $('#code-example').html();
 	if(typeof info != 'undefined'){
@@ -59,5 +80,18 @@ $('.footer').on('click', function() {
 		exampleCode();
 	});
 
+function flipAnimation(){
+	$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
+			  perspective: '1000px',
+			  rotateX: '-90deg'
+			},500, function(){
+				$('#change-content').transition({
+					  perspective: '2000px',
+					  rotateX: '0deg'
+					},500);
+			});
+}
 
-
+$(window).resize(function(){
+	mainContentWidth = $('.main-content').width();
+});

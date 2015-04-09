@@ -27,23 +27,25 @@ html, body {
 @-webkit-keyframes buttonZoom {
    from{transform: scale(1);
 }
-   to{transform: scale(1.05);}
+   to{transform: scale(1.03);}
 }
 @keyframes buttonZoom {
    from{transform: scale(1);
 }
-   to{transform: scale(1.05);}
+   to{transform: scale(1.03);}
 }
 
 div.header {
-    background: #000;
+    @include linear-gradient(90deg, #555, #666);
     width: 100%;
-    box-shadow: 0 0 15px 0 #000;
-    border-bottom: 1px solid #999;
+    box-shadow: 0 0 15px 0 #000, inset 0 0 50px 5px #888, inset 0 -2px 10px 2px #000;
+    border-bottom: 2px solid #ddd;
+    cursor: pointer;
     h1 {
         color: #fff;
-        padding: 10px;
+        padding: 7px;
         font-size: 5em;
+        text-shadow: 1px 1px 5px #000;
     }
 }
 
@@ -51,13 +53,14 @@ div.footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    background: #000;
+    @include linear-gradient(90deg, #555, #666);
     width: 100%;
-    box-shadow: 0 0 15px 0 #000;
+    box-shadow: 0 0 15px 0 #000, inset 0 0 20px 2px #333;
     border-top: 1px solid #999;
     h2 {
         color: #fff;
         margin: 10px;
+        text-shadow: 1px 1px 5px #000;
     }
 }
 
@@ -67,8 +70,20 @@ div.wrapper {
     margin: 10px auto;
     padding: 10px;
 
+    h2 {
+        color: #2781C6;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 5em;
+        font-weight: bold;
+    }
+    h4 {
+                color: #ddd;
+                font-size: 2.5em;
+            }
+
     div.side-menu {
-        margin-top: 50px;
+        margin-top: 10px;
+        margin-bottom: 50px;
         text-align: center;
         padding: 10px;
 
@@ -80,7 +95,7 @@ div.wrapper {
 
         ul {
             list-style-type: none;
-            margin-top: 50px;
+            margin-top: 30px;
 
             li {
                 padding: 10px 20px 10px 20px;
@@ -88,45 +103,56 @@ div.wrapper {
 
                 div {
                     margin: 0 auto;
-                    height: 200px;
-                    width: 300px;
+                    height: 150px;
+                    width: 280px;
                     border-radius: 5px;
-                    background: #03467A;
+                    @include linear-gradient(90deg, #ddd, #eee);
                     font-size: 3em;
-                    padding: 5px;
-                    box-shadow: 2px 2px 10px 3px #000,inset 0 0 5px 0 #000, inset 0 0 50px 15px #023862;
+                    padding: 10px;
+                    box-shadow: 2px 2px 10px 3px #000, 0 0 10px 5px #2781C6,inset 0 0 200px 0 #000;
                     cursor: pointer;
                     display: table-cell;
-                    vertical-align: middle;
                     &:hover {
-                        -webkit-animation-name: buttonZoom;
+                      /*  -webkit-animation-name: buttonZoom;
                         -webkit-animation-duration: 0.5s;
-                        -webkit-animation-fill-mode: forwards;
+                        -webkit-animation-fill-mode: forwards; */
                     }
 
                     p {
+                        @include linear-gradient(90deg, #555, #666);
+                        box-shadow: 0 0 2px 0 #000, inset 0 0 20px 0 #555;
                         color: #ddd;
                         text-shadow: 2px 2px 2px #000;
                         pointer-events: none;
+                        border-radius: 10px;
+                        padding: 10px;
                     }
                 }
             }
         }
     }
     div.main-content {
+        margin-top: 40px;
+        text-align: center;
         overflow: hidden;
+        padding: 20px;
         .text-slide {
             position: relative;
             h2 {
-            color: #2781C6;
-            text-shadow: 2px 2px 2px #000;
-            font-size: 5em;
-            font-weight: bold;
+                border: 1px solid #333;
+                display: inline-block;
+                color: #fff;
+                text-shadow: 2px 2px 2px #000;
+                font-size: 3em;
+                line-height: 1.5em;
+                font-weight: bold;
+                padding: 40px;
+                border-radius: 20px;
+                @include linear-gradient(90deg, #ddd, #eee);
+                padding: 10px;
+                box-shadow: 2px 2px 10px 3px #000,inset 0 0 200px 0 #000;
             }
-            h4 {
-                color: #ddd;
-                font-size: 2.5em;
-            }
+            
         }
 
     }
