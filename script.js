@@ -52,7 +52,12 @@ function loadXMLDoc(url, elementId){
 }
 
 $('#next-lesson').click(function() {
-  	loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+	var buttonIs = $('#next-lesson').html();
+	if(buttonIs.indexOf("Continue") > -1){
+			window.location.href = "index.html";
+		}else{
+			loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+		}
   	
 });
 
@@ -69,8 +74,10 @@ function updateLessonNumber(){
 		if(isNaN(lessonNumber)){
 			lessonNumber = 1;
 		}
-	}else if(currentLesson.Contains("wrap")){
-		$('next-lesson').html('Continue');
+	 if(currentLesson.indexOf("wrap") > -1){
+		$('#next-lesson').html('Continue');
+		alert(currentLesson.indexOf("wrap"));
+		}
 	}
 	
 	$('.code').on('click', function() {
