@@ -69,6 +69,8 @@ function updateLessonNumber(){
 		if(isNaN(lessonNumber)){
 			lessonNumber = 1;
 		}
+	}else if(currentLesson.Contains("wrap")){
+		$('next-lesson').html('Continue');
 	}
 	
 	$('.code').on('click', function() {
