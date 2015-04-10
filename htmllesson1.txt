@@ -1,4 +1,4 @@
-<h2 id="current-lesson">HTML lesson 1</h2>
+<h2 id="current-lesson">HTML lesson 1 - Intro to HTML</h2>
 			<h4 class="indent">HTML is an acronym for "HyperText Markup Language" and consists of tags like &lt;html&gt;.<br>There are a variety of HTML tags and they each define thier own content.<br>Below is an example of a very simple HTML website.</h4>
 			<h4 class="code">&lt;!DOCTYPE html>
 &lt;html>

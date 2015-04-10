@@ -1,4 +1,4 @@
-<h2 id="current-lesson">HTML lesson 9</h2>
+<h2 id="current-lesson">HTML lesson 9 - Intro to nesting</h2>
 			<h4 class="indent">We have a nice box now, but let's see if we can put something in it. I've added a new tag inside our div, called the p tag or "paragraph" &lt;p>&lt;/p>. The p tag is used for long text like paragraphs or other lengthy text situations. All you have to do is put the &lt;p>&lt;/p> tags between our &lt;div>....&lt;/div> tags and we are set. Click to see the result!</h4>
 			<h4 class="code">&lt;!DOCTYPE html>
 &lt;html>

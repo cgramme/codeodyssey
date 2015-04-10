@@ -39,9 +39,9 @@ function loadXMLDoc(url, elementId){
     				document.getElementById(elementId).innerHTML=xmlhttp.responseText;
     				updateLessonNumber();
     				$('#change-content').css({ transformOrigin: +mainContentWidth/2+'px 0px' }).transition({
-			  perspective: '0px',
-			  rotateX: '0deg'
-			},500);
+						perspective: '0px',
+						rotateX: '0deg'
+					},500);
    
    			 }else if (xmlhttp.readyState==4 && xmlhttp.status==404){
    			 		alert("Lesson not made yet, check back at a later time.");

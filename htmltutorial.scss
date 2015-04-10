@@ -23,8 +23,7 @@ html, body {
     right: 0;
 }
 body {
-    background: url(images/background3.jpg) no-repeat fixed;
-    background-size: 100% 100%;
+    @include linear-gradient(90deg, #aaa, #ddd);
 }
 
 
@@ -91,7 +90,7 @@ div.wrapper {
                 div {
                     border-radius: 5px;
                     background: #060F15;
-                    font-size: 3em;
+                    font-size: 2.5em;
                     padding: 5px;
                     box-shadow: 2px 2px 10px 0 #000, inset 0 0 20px 0 #222;
                     color: #ddd;
@@ -108,12 +107,13 @@ div.wrapper {
     div.main-content {
         float: right;
         width: 870px;
-        height: 460px;
+        min-height: 460px;
         @include linear-gradient(#111, #333);
         border-radius: 20px;
         padding: 30px;
         box-shadow: 2px 2px 15px 0 #000;
         border: 2px solid #999;
+        margin-bottom: 50px;
 
         h2 {
             color: #2781C6;

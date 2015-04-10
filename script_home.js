@@ -2,8 +2,20 @@
 
 //Document is loaded
 $(document).ready(function(){
+
+	$('.menu .courses').mouseenter(function(){
+		$('.sub-menu').slideDown(200);
+	});
+
+	$('.menu').mouseleave(function(){
+		$('.sub-menu').slideUp(200);
+	});
+
+
+
+
+
 	//HTML Basics click to start course
-	
     $('.html-basics').mouseover(function() {
 		$('.html-basics').find('p').transition({
 			  perspective: '500px',
@@ -65,19 +77,19 @@ $(document).ready(function(){
 });
 //Welcome text and recommendations for courses animated sliding text
 function slideText(){
-     $('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
-     	$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
-     		$('.text-slide').find('h2').html("Are you just starting out?<br> Try our HTML Basics course.");
-     		$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
-     			$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
-     				$('.text-slide').find('h2').html("Need something more advanced?<br>Check out the CSS Intermediate course.");
-     				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
-     					$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
-		     				$('.text-slide').find('h2').html("All access granted intermediately.<br>Skip ahead, review, or learn only what you want.");
-		     				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, function(){
-		     					$('.text-slide').delay(5000).animate({"left":"-1500px"}, 1500, function(){
-				     				$('.text-slide').find('h2').html("All our courses are completely free!<br>Learn at your own pace.");
-				     				$('.text-slide').css({"left":"1500px"}).animate({"left":"0px"}, 1500, slideText());
+     $('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
+     	$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+     		$('.text-slide').html("Are you just starting out?<br> Try our HTML Basics course.");
+     		$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
+     			$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+     				$('.text-slide').html("Need something more advanced?<br>Check out the CSS Intermediate course.");
+     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
+     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+		     				$('.text-slide').html("All access granted immediately.<br>Skip ahead, review, or learn only what you want.");
+		     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
+		     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+				     				$('.text-slide').html("All our courses are completely free!<br>Learn at your own pace.");
+				     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, slideText());
 				     			});
 
 			     			});
