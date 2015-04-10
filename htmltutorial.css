@@ -14,13 +14,13 @@ html, body {
   right: 0; }
 
 body {
-  background: -webkit-linear-gradient(90deg, #aaa, #ddd);
+  background: -webkit-linear-gradient(0deg, #222, #ddd, #222);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(90deg, #aaa, #ddd);
+  background: -o-linear-gradient(0deg, #222, #ddd, #222);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(90deg, #aaa, #ddd);
+  background: -moz-linear-gradient(0deg, #222, #ddd, #222);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(90deg, #aaa, #ddd);
+  background: linear-gradient(0deg, #222, #ddd, #222);
   /* Standard syntax */ }
 
 div.header {
@@ -74,17 +74,16 @@ div.wrapper {
     text-align: center;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 2px 2px 15px 0 #000;
     border: 2px solid #999;
-    background: -webkit-linear-gradient(90deg, #ddd, #eee);
+    background: -webkit-linear-gradient(90deg, #aaa, #ccc);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(90deg, #ddd, #eee);
+    background: -o-linear-gradient(90deg, #aaa, #ccc);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(90deg, #ddd, #eee);
+    background: -moz-linear-gradient(90deg, #aaa, #ccc);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(90deg, #ddd, #eee);
+    background: linear-gradient(90deg, #aaa, #ccc);
     /* Standard syntax */
-    box-shadow: inset 0 0 200px 0 #000; }
+    box-shadow: 2px 2px 20px 5px #000, inset 0 0 100px 0 #000; }
     div.wrapper .side-menu h4 {
       font-size: 3.5em;
       color: #333;
@@ -129,7 +128,7 @@ div.wrapper {
     /* Standard syntax */
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 2px 2px 15px 0 #000;
+    box-shadow: 2px 2px 20px 5px #000, inset 0 0 20px 5px #000;
     border: 2px solid #999;
     margin-bottom: 50px; }
     div.wrapper div.main-content h2 {

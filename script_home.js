@@ -89,7 +89,12 @@ function slideText(){
 		     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
 		     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
 				     				$('.text-slide').html("All our courses are completely free!<br>Learn at your own pace.");
-				     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, slideText());
+				     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
+				     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+					     					$('.text-slide').html("More courses coming soon!<br>Stay tuned in.");
+					     					$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, slideText());
+					     				});
+				     				});
 				     			});
 
 			     			});

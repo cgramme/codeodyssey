@@ -76,7 +76,6 @@ function updateLessonNumber(){
 		}
 	 if(currentLesson.indexOf("wrap") > -1){
 		$('#next-lesson').html('Continue');
-		alert(currentLesson.indexOf("wrap"));
 		}
 	}
 	

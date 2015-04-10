@@ -110,19 +110,21 @@ div.footer {
 div.wrapper {
     width: 1200px;
     height: 500px;
-    margin: 10px auto;
+    margin: 60px auto;
     padding: 10px;
 
     h2 {
+        text-align: center;
         color: #2781C6;
-        text-shadow: 2px 2px 2px #000;
-        font-size: 5em;
+        text-shadow: 2px 2px 5px #000;
+        font-size: 5.5em;
         font-weight: bold;
     }
     h4 {
-                color: #ddd;
-                font-size: 2.5em;
-            }
+        text-align: center;
+        color: #ddd;
+        font-size: 2.5em;
+    }
 
     div.side-menu {
         margin-top: 10px;

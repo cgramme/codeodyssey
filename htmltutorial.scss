@@ -23,7 +23,7 @@ html, body {
     right: 0;
 }
 body {
-    @include linear-gradient(90deg, #aaa, #ddd);
+    @include linear-gradient(0deg, #222, #ddd, #222);
 }
 
 
@@ -69,10 +69,9 @@ div.wrapper {
         text-align: center;
         border-radius: 20px;
         padding: 10px;
-        box-shadow: 2px 2px 15px 0 #000;
         border: 2px solid #999;
-        @include linear-gradient(90deg, #ddd, #eee);
-        box-shadow: inset 0 0 200px 0 #000;
+        @include linear-gradient(90deg, #aaa, #ccc);
+        box-shadow: 2px 2px 20px 5px #000, inset 0 0 100px 0 #000;
         h4 {
             font-size: 3.5em;
             color: #333;
@@ -111,7 +110,7 @@ div.wrapper {
         @include linear-gradient(#111, #333);
         border-radius: 20px;
         padding: 30px;
-        box-shadow: 2px 2px 15px 0 #000;
+        box-shadow: 2px 2px 20px 5px #000, inset 0 0 20px 5px #000;
         border: 2px solid #999;
         margin-bottom: 50px;
 
