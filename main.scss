@@ -52,6 +52,9 @@ div.header {
     .menu {
         float: right;
         margin-right: 20px;
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
         li {
             display: inline-block;
             font-size: 3.5em;
@@ -92,11 +95,17 @@ div.footer {
     height: 40px;
     box-shadow: 0 0 15px 0 #000, inset 0 0 20px 0 #222;
     border-top: 1px solid #999;
+    @media screen and (max-width: 800px) {
+        margin-top: 20px;
+    }
     h2 {
         font-size: 2em;
         color: #fff;
         padding: 10px;
         text-shadow: 1px 1px 5px #000;
+        @media screen and (max-width: 400px) {
+         font-size: 1.5em;
+        }
     }
 }
 
@@ -104,14 +113,23 @@ div.footer {
     text-align: center;
     color: #fff;
     font-size: 3.5em;
-    margin-top: 100px;
+    @media screen and (max-width: 600px) {
+        font-size: 2em;
+    }
 }
 
 div.wrapper {
-    width: 1200px;
-    height: 500px;
-    margin: 60px auto;
+    width: 1100px;
+    margin: 60px auto 0 auto;
     padding: 10px;
+    @media screen and (max-width: 1100px) {
+                width: 95%;
+                padding: 0;
+            }
+    @media screen and (max-width: 800px) {
+        margin: 20px auto 0 auto;
+        width: 100%;
+    }
 
     h2 {
         text-align: center;
@@ -119,11 +137,20 @@ div.wrapper {
         text-shadow: 2px 2px 5px #000;
         font-size: 5.5em;
         font-weight: bold;
+        @media screen and (max-width: 800px) {
+                font-size: 4em;
+            }
+        @media screen and (max-width: 600px) {
+            font-size: 3em;
+        }
     }
     h4 {
         text-align: center;
         color: #ddd;
         font-size: 2.5em;
+        @media screen and (max-width: 800px) {
+                font-size: 2em;
+            }
     }
 
     div.side-menu {
@@ -131,20 +158,32 @@ div.wrapper {
         margin-bottom: 50px;
         text-align: center;
         padding: 10px;
+        @media screen and (max-width: 800px) {
+            margin-bottom: 10px;
+        }
 
         h4 {
             font-size: 5em;
             color: #fff;
             text-shadow: 3px 3px 5px #000;
+            @media screen and (max-width: 500px) {
+                font-size: 3em;
+            }
         }
 
         ul {
             list-style-type: none;
             margin-top: 30px;
+            @media screen and (max-width: 600px) {
+                margin-top: 15px;
+            }
 
             li {
-                padding: 10px 20px 10px 20px;
+                padding: 10px 20px;
                 display: inline-block;
+                @media screen and (max-width: 800px) {
+                    padding: 10px;
+                }
 
                 div {
                     margin: 0 auto;
@@ -180,17 +219,21 @@ div.wrapper {
         margin-top: 40px;
         text-align: center;
         overflow: hidden;
-        padding: 20px;
+        @media screen and (max-width: 800px) {
+        }
 
 
         .slide-contain {
             overflow: hidden;
             width: 500px;
-            margin: 0 auto;
+            margin: 15px auto;
             padding: 20px;
             @include linear-gradient(90deg, #bbb, #ccc);
             box-shadow: 2px 2px 10px 3px #000,inset 0 0 200px 0 #000;
             border-radius: 20px;
+            @media screen and (max-width: 650px) {
+                width: 85%;
+            }
 
             .text-slide {
                 position: relative;
@@ -200,6 +243,9 @@ div.wrapper {
                 font-size: 3.3em;
                 line-height: 1.5em;
                 font-weight: bold;
+                @media screen and (max-width: 650px) {
+                    font-size: 2.5em;
+                }
             }
         }
 
@@ -211,4 +257,7 @@ div.wrapper {
 }
 .right {
     float: right;
+}
+.clear {
+    clear: both;
 }

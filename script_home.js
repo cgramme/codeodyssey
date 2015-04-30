@@ -77,22 +77,22 @@ $(document).ready(function(){
 });
 //Welcome text and recommendations for courses animated sliding text
 function slideText(){
-     $('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
-     	$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+     $('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
+     	$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
      		$('.text-slide').html("Are you just starting out?<br> Try our HTML Basics course.");
-     		$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
-     			$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+     		$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
+     			$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
      				$('.text-slide').html("Need something more advanced?<br>Check out the CSS Intermediate course.");
-     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
-     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+     				$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
+     					$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
 		     				$('.text-slide').html("All access granted immediately.<br>Skip ahead, review, or learn only what you want.");
-		     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
-		     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+		     				$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
+		     					$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
 				     				$('.text-slide').html("All our courses are completely free!<br>Learn at your own pace.");
-				     				$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, function(){
-				     					$('.text-slide').delay(5000).animate({"left":"-500px"}, 1000, function(){
+				     				$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
+				     					$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
 					     					$('.text-slide').html("More courses coming soon!<br>Stay tuned in.");
-					     					$('.text-slide').css({"left":"500px"}).animate({"left":"0px"}, 1000, slideText());
+					     					$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, slideText());
 					     				});
 				     				});
 				     			});

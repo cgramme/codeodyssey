@@ -62,6 +62,10 @@ div.wrapper {
     margin: 10px auto;
     padding: 10px;
 
+    @media screen and (min-height: 800px) {
+            margin-top: 100px;
+        }
+
     .side-menu {
         float: left;
         width: 200px;

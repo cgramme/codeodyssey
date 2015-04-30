@@ -5,6 +5,8 @@ $(window).load(function(){
 		showArrows: true
 	});
 	mainContentWidth = $('.main-content').width();
+
+	
 });
 
 $(document).ready(function(){
@@ -56,13 +58,13 @@ $('#next-lesson').click(function() {
 	if(buttonIs.indexOf("Continue") > -1){
 			window.location.href = "index.html";
 		}else{
-			loadXMLDoc("htmllesson"+lessonNumber+".txt","change-content");
+			loadXMLDoc("lessons/htmllesson"+lessonNumber+".txt","change-content");
 		}
   	
 });
 
 $('ul li').on('click', function() {
-    loadXMLDoc("htmllesson"+($(this).index()+1)+".txt","change-content");
+    loadXMLDoc("lessons/htmllesson"+($(this).index()+1)+".txt","change-content");
    
 });
 
