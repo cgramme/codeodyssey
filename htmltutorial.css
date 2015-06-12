@@ -197,7 +197,8 @@ div.wrapper {
       color: #999;
       text-shadow: 0px 0px 1px #000;
       box-shadow: 2px 2px 5px 0 #000;
-      border: 1px solid #222; }
+      border: 1px solid #222;
+      overflow: auto; }
       @media screen and (max-width: 800px) {
         div.wrapper div.main-content .code {
           width: 95%;
@@ -205,10 +206,7 @@ div.wrapper {
           padding: 5px; } }
       @media screen and (max-width: 600px) {
         div.wrapper div.main-content .code {
-          font-size: 2em; } }
-      @media screen and (max-width: 400px) {
-        div.wrapper div.main-content .code {
-          font-size: 1.8em; } }
+          font-size: 2.2em; } }
     div.wrapper div.main-content button {
       margin-top: 20px;
       padding: 10px;
