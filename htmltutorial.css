@@ -65,8 +65,12 @@ div.footer {
 div.wrapper {
   width: 1200px;
   height: 500px;
-  margin: 10px auto;
+  margin: 10px auto 70px auto;
   padding: 10px; }
+  @media screen and (max-width: 1000px) {
+    div.wrapper {
+      width: 100%;
+      padding: 0; } }
   @media screen and (min-height: 800px) {
     div.wrapper {
       margin-top: 100px; } }
@@ -87,6 +91,9 @@ div.wrapper {
     background: linear-gradient(90deg, #aaa, #ccc);
     /* Standard syntax */
     box-shadow: 2px 2px 20px 5px #000, inset 0 0 100px 0 #000; }
+    @media screen and (max-width: 1000px) {
+      div.wrapper .side-menu {
+        display: none; } }
     div.wrapper .side-menu h4 {
       font-size: 3.5em;
       color: #333;
@@ -134,24 +141,39 @@ div.wrapper {
     box-shadow: 2px 2px 20px 5px #000, inset 0 0 20px 5px #000;
     border: 2px solid #999;
     margin-bottom: 50px; }
+    @media screen and (max-width: 1000px) {
+      div.wrapper div.main-content {
+        float: none;
+        margin: 0 auto;
+        width: 90%;
+        padding: 10px; } }
     div.wrapper div.main-content h2 {
       color: #2781C6;
       text-shadow: 2px 2px 2px #000;
       font-size: 5em;
       font-weight: bold;
       margin-bottom: 20px; }
+      @media screen and (max-width: 600px) {
+        div.wrapper div.main-content h2 {
+          font-size: 3.5em; } }
     div.wrapper div.main-content .photo {
       height: 200px;
       width: 150px;
       border-radius: 10px;
       box-shadow: 2px 2px 5px 0 #000;
       margin-left: 10px; }
+      @media screen and (max-width: 500px) {
+        div.wrapper div.main-content .photo {
+          display: none; } }
     div.wrapper div.main-content .description {
       color: #999;
       font-size: 2em;
       float: right;
       clear: right;
       margin-right: 25px; }
+      @media screen and (max-width: 500px) {
+        div.wrapper div.main-content .description {
+          display: none; } }
     div.wrapper div.main-content h3 {
       color: #fff;
       font-size: 3.5em;
@@ -159,6 +181,9 @@ div.wrapper {
     div.wrapper div.main-content h4 {
       color: #ddd;
       font-size: 2.5em; }
+      @media screen and (max-width: 600px) {
+        div.wrapper div.main-content h4 {
+          font-size: 2.2em; } }
     div.wrapper div.main-content .code {
       display: block;
       unicode-bidi: embed;
@@ -173,6 +198,17 @@ div.wrapper {
       text-shadow: 0px 0px 1px #000;
       box-shadow: 2px 2px 5px 0 #000;
       border: 1px solid #222; }
+      @media screen and (max-width: 800px) {
+        div.wrapper div.main-content .code {
+          width: 95%;
+          margin: 0 auto;
+          padding: 5px; } }
+      @media screen and (max-width: 600px) {
+        div.wrapper div.main-content .code {
+          font-size: 2em; } }
+      @media screen and (max-width: 400px) {
+        div.wrapper div.main-content .code {
+          font-size: 1.8em; } }
     div.wrapper div.main-content button {
       margin-top: 20px;
       padding: 10px;

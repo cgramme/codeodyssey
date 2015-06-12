@@ -59,8 +59,13 @@ div.footer {
 div.wrapper {
     width: 1200px;
     height: 500px;
-    margin: 10px auto;
+    margin: 10px auto 70px auto;
     padding: 10px;
+
+    @media screen and (max-width: 1000px) {
+            width: 100%;
+            padding: 0;
+        }
 
     @media screen and (min-height: 800px) {
             margin-top: 100px;
@@ -76,6 +81,9 @@ div.wrapper {
         border: 2px solid #999;
         @include linear-gradient(90deg, #aaa, #ccc);
         box-shadow: 2px 2px 20px 5px #000, inset 0 0 100px 0 #000;
+        @media screen and (max-width: 1000px){
+            display: none;
+        }
         h4 {
             font-size: 3.5em;
             color: #333;
@@ -117,6 +125,12 @@ div.wrapper {
         box-shadow: 2px 2px 20px 5px #000, inset 0 0 20px 5px #000;
         border: 2px solid #999;
         margin-bottom: 50px;
+        @media screen and (max-width: 1000px){
+            float: none;
+            margin: 0 auto;
+            width: 90%;
+            padding: 10px;
+        }
 
         h2 {
             color: #2781C6;
@@ -124,6 +138,9 @@ div.wrapper {
             font-size: 5em;
             font-weight: bold;
             margin-bottom: 20px;
+            @media screen and (max-width: 600px){
+                font-size: 3.5em;
+            }
         }
         .photo {
             height: 200px;
@@ -131,6 +148,9 @@ div.wrapper {
             border-radius: 10px;
             box-shadow: 2px 2px 5px 0 #000;
             margin-left: 10px;
+            @media screen and (max-width: 500px){
+                display: none;
+            }
         }
         .description {
             color: #999;
@@ -138,6 +158,9 @@ div.wrapper {
             float: right;
             clear: right;
             margin-right: 25px;
+            @media screen and (max-width: 500px){
+                display: none;
+            }
         }
         h3 {
             color: #fff;
@@ -147,6 +170,10 @@ div.wrapper {
         h4 {
             color: #ddd;
             font-size: 2.5em;
+            @media screen and (max-width: 600px){
+                font-size: 2.2em;
+            }
+        
         }
         .code {
             display: block;
@@ -162,6 +189,17 @@ div.wrapper {
             text-shadow: 0px 0px 1px #000;
             box-shadow: 2px 2px 5px 0 #000;
             border: 1px solid #222;
+            @media screen and (max-width: 800px){
+                width: 95%;
+                margin: 0 auto;
+                padding: 5px;
+            }
+            @media screen and (max-width: 600px){
+                font-size: 2em;
+            }
+            @media screen and (max-width: 400px){
+                font-size: 1.8em;
+            }
         }
         button {
             margin-top: 20px;
