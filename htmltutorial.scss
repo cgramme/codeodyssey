@@ -23,7 +23,7 @@ html, body {
     right: 0;
 }
 body {
-    @include linear-gradient(0deg, #222, #ddd, #222);
+    background: url(images/mountain1.jpg);
 }
 
 
@@ -100,10 +100,10 @@ div.wrapper {
 
                 div {
                     border-radius: 5px;
-                    background: #060F15;
+                    background: #074F87;
                     font-size: 2.5em;
                     padding: 5px;
-                    box-shadow: 2px 2px 10px 0 #000, inset 0 0 20px 0 #222;
+                    box-shadow: 2px 2px 10px 0 #000, inset 0 0 50px 0 #222;
                     color: #ddd;
                     text-shadow: 1px 1px 2px #000;
                     cursor: pointer;
