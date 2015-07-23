@@ -76,7 +76,11 @@ div.header {
   div.header img {
     height: 70px;
     width: 70px;
-    float: right; }
+    float: right;
+    display: none; }
+    @media screen and (max-width: 800px) {
+      div.header img {
+        display: block; } }
     @media screen and (max-width: 500px) {
       div.header img {
         height: 50px;
@@ -294,7 +298,14 @@ div.wrapper {
           background: -moz-linear-gradient(150deg, #222, #111);
           background: linear-gradient(150deg, #222, #111);
           box-shadow: 1px 1px 1px 0 #999, inset 1px 1px 10px 2px #000;
-          border-radius: 10px; } }
+          border-radius: 10px;
+          height: 60px; } }
+      @media screen and (max-width: 650px) {
+        div.wrapper div.main-content .slide-contain {
+          height: 45px; } }
+      @media screen and (max-width: 500px) {
+        div.wrapper div.main-content .slide-contain {
+          height: 35px; } }
       @media screen and (max-width: 370px) {
         div.wrapper div.main-content .slide-contain {
           width: 80%; } }
