@@ -1,17 +1,18 @@
-html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p, button{
+html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p, button, span{
     margin: 0;
     padding: 0;
     border: 0;
     font-weight: normal;
     font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    list-style-type: none;
     
 }
 
 @mixin linear-gradient($params...) {
-      background: -webkit-linear-gradient($params); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient($params); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient($params); /* For Firefox 3.6 to 15 */
-      background: linear-gradient($params); /* Standard syntax */
+      background: -webkit-linear-gradient($params);
+      background: -o-linear-gradient($params);
+      background: -moz-linear-gradient($params);
+      background: linear-gradient($params);
 }
 
 html, body {
@@ -21,12 +22,43 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(images/mountain1.jpg) fixed;
-    background-size: 100% 100%;
-    @media screen and (max-width: 700px) {
-        background-size: cover;
-    }
+    background: url(images/background4.jpg);
 }
+
+
+
+
+
+
+@mixin addTranslateX ($param){
+    -moz-transform: translateX($param);
+    -webkit-transform: translateX($param);
+    -o-transform: translateX($param);
+    transform: translateX($param);
+}
+@mixin addScaleX ($param){
+    -moz-transform: scaleX($param);
+    -webkit-transform: scaleX($param);
+    -o-transform: scaleX($param);
+    transform: scaleX($param);
+}
+@-webkit-keyframes translateXin {
+   0% {@include addTranslateX(1500px)}
+   20% {@include addTranslateX(-10px)}
+   25% {@include addTranslateX(0px)}
+   80% {@include addTranslateX(0px)}
+   100% {@include addTranslateX(-700px)}
+}
+.translate-x-in {
+    -webkit-animation-name: translateXin;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+
+
+
 
 @-webkit-keyframes buttonZoom {
    from{transform: scale(1);
@@ -40,33 +72,55 @@ html, body {
 }
 
 div.header {
-    background: #ddd;
     width: 100%;
-    box-shadow: 0 0 15px 0 #000, inset 0px -20px 50px 0 #aaa;
-    border-bottom: 2px solid #999;
+    height: 60px;
+    @media screen and (max-width: 500px){
+        height: 40px;
+    }
     h1 {
-        color: #000;
+        color: #fff;
         padding: 7px;
-        font-size: 5em;
-        text-shadow: 2px 2px 2px #999;
+        font-size: 6em;
+        text-shadow: 2px 2px 2px #000;
         font-weight: bold;
         cursor: pointer;
         display: inline-block;
+        @media screen and (max-width: 500px){
+            font-size: 4em;
+        }
+    }
+    div.menu-button {
+        color: #fff;
+        font-size: 10em;
+        float: right;
+        line-height: 10px;
+        margin-right: 20px;
+        display: none;
+        top: -20px;
+        position: relative;
+        &:hover {
+            cursor: pointer;
+            color: #2781C6;
+        }
+        @media screen and (max-width: 800px){
+            display: inline-block;
+        }
     }
     .menu {
         float: right;
         margin-right: 20px;
-        @media screen and (max-width: 650px) {
+        padding-top: 10px;
+        @media screen and (max-width: 800px) {
             display: none;
         }
         li {
             display: inline-block;
             font-size: 3.5em;
-            color: #777;
+            color: #fff;
             font-weight: bold;
             margin: 15px 20px 10px 5px;
             cursor: pointer;
-            text-shadow: 0 0 3px #fff;
+            text-shadow: 1px 1px 2px #000;
             &:hover {
                 color: #2781C6;
             }
@@ -93,7 +147,7 @@ div.header {
 }
 
 div.footer {
-    margin-top: 100px;
+    margin-top: 70px;
     @include linear-gradient(90deg, #333, #444);
     width: 100%;
     height: 40px;
@@ -113,26 +167,27 @@ div.footer {
     }
 }
 
-.coming-soon {
+.coming-soon-text {
+    margin: 60px 10px 0 10px;
     text-align: center;
     color: #fff;
     font-size: 3.5em;
     text-shadow: 1px 1px 3px #000;
-    @media screen and (max-width: 600px) {
-        font-size: 2em;
+    @media screen and (max-width: 800px) {
+        font-size: 2.5em;
+        margin-top: 20px;
     }
 }
 
 div.wrapper {
-    width: 1100px;
-    margin: 60px auto 0 auto;
-    padding: 10px;
+    width: 98%;
+    margin: 10px auto 0 auto;
     @media screen and (max-width: 1100px) {
                 width: 95%;
                 padding: 0;
             }
     @media screen and (max-width: 800px) {
-        margin: 20px auto 0 auto;
+        margin: 10px auto 0 auto;
         width: 100%;
     }
 
@@ -142,10 +197,10 @@ div.wrapper {
         text-shadow: 2px 2px 5px #000;
         font-size: 5.5em;
         font-weight: bold;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
                 font-size: 4em;
             }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 700px) {
             font-size: 3em;
         }
     }
@@ -154,24 +209,37 @@ div.wrapper {
         color: #ddd;
         font-size: 2.5em;
         text-shadow: 1px 1px 2px #000;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
                 font-size: 2em;
-            }
+        }
+        @media screen and (max-width: 700px) {
+                font-size: 1.5em;
+        }
     }
 
     div.side-menu {
-        margin-top: 10px;
+        margin-top: 50px;
         margin-bottom: 50px;
         text-align: center;
-        padding: 10px;
-        @media screen and (max-width: 800px) {
+        padding: 40px 10px 100px 10px;
+        border-radius: 110px 20px 20px 250px;
+        box-shadow: 1px 1px 7px 0 #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
+         @include linear-gradient(90deg, #eee, #999);
+        @media screen and (max-width: 1100px) {
             margin-bottom: 10px;
+            border-radius: 20px;
+        }
+        @media screen and (max-width: 800px){
+            border-radius: 0;
+            box-shadow: 1px 1px 7px 0 #000, 0 0 2px 2px #fff;
+            margin-top: 20px;
         }
 
         h4 {
-            font-size: 5em;
-            color: #fff;
-            text-shadow: 3px 3px 5px #000;
+            font-size: 6em;
+            color: #555;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #999;
             @media screen and (max-width: 500px) {
                 font-size: 3em;
             }
@@ -183,9 +251,27 @@ div.wrapper {
             @media screen and (max-width: 600px) {
                 margin-top: 15px;
             }
+            .html-basics {
+                background: #B9E3B7;
+            }
+            .html-intermediate {
+                background: #FFFFCD;
+            }
+            .css-basics {
+                background: #A9B6CE;
+            }
+            .css-intermediate {
+                background: #AF4043;
+            }
+            .javascript-basics {
+                background: #4F668F;
+            }
+            .sass-basics {
+                background: #5CAE58;
+            }
 
             li {
-                padding: 10px 20px;
+                padding: 20px 30px;
                 display: inline-block;
                 @media screen and (max-width: 800px) {
                     padding: 10px;
@@ -195,25 +281,31 @@ div.wrapper {
                     margin: 0 auto;
                     height: 150px;
                     width: 280px;
-                    border-radius: 5px;
-                    background: url(images/metal_fade.jpg);
+                    border-radius: 10px;
+                    background: #111;
                     background-size: 100% 100%;
                     font-size: 3em;
                     padding: 10px;
-                    box-shadow: 2px 2px 10px 3px #000, 0 0 10px 5px #2781C6,inset 0 0 10px 0 #000;
+                    border: 2px solid #555;
+                    box-shadow: 2px 2px 10px 0 #000, inset 0 0 1px 1px #aaa;
                     cursor: pointer;
                     display: table-cell;
                     &:hover {
-                      /*  -webkit-animation-name: buttonZoom;
+                        -webkit-animation-name: buttonZoom;
                         -webkit-animation-duration: 0.5s;
-                        -webkit-animation-fill-mode: forwards; */
+                        -webkit-animation-fill-mode: forwards;
+                        box-shadow: 2px 2px 12px 0px #000;
+                        border: 2px solid transparent;
+                    }
+                    @media screen and (max-width: 900px){
+                        width: 220px;
                     }
 
                     p {
-                        @include linear-gradient(90deg, #555, #666);
-                        box-shadow: 0 0 2px 0 #000, inset 0 0 20px 0 #555;
-                        color: #ddd;
-                        text-shadow: 2px 2px 2px #000;
+                        background: #fff;
+                        box-shadow: 1px 1px 3px 0 #000, inset 0 0 3px 0 #000;
+                        color: #555;
+                        text-shadow: 1px 1px 1px #999;
                         pointer-events: none;
                         border-radius: 10px;
                         padding: 10px;
@@ -223,7 +315,7 @@ div.wrapper {
         }
     }
     div.main-content {
-        margin-top: 40px;
+        margin-top: 0px;
         text-align: center;
         overflow: hidden;
         @media screen and (max-width: 800px) {
@@ -232,12 +324,9 @@ div.wrapper {
 
         .slide-contain {
             overflow: hidden;
-            width: 500px;
+            width: 700px;
             margin: 15px auto;
             padding: 20px;
-            @include linear-gradient(90deg, #bbb, #ccc);
-            box-shadow: 2px 2px 10px 3px #000,inset 0 0 200px 0 #000,inset 0 0 5px #000;
-            border-radius: 20px;
             @media screen and (max-width: 650px) {
                 width: 85%;
             }
@@ -256,12 +345,119 @@ div.wrapper {
                 font-size: 3.3em;
                 line-height: 1.5em;
                 font-weight: bold;
+                span {
+
+                }
+                li {
+                    display: none;
+                }
                 @media screen and (max-width: 650px) {
                     font-size: 2.5em;
+                }
+                @media screen and (max-width: 500px) {
+                    font-size: 2em;
                 }
             }
         }
 
+    }
+}
+.information {
+    text-align: center;
+     border-radius: 250px 20px 20px 20px;
+     box-shadow: 1px 1px 7px 0 #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
+     @include linear-gradient(150deg, #777, #333);
+     padding: 50px 10px;
+     @media screen and (max-width: 1100px){
+        border-radius: 20px;
+     }
+     @media screen and (max-width: 800px){
+        border-radius: 0;
+        box-shadow: 1px 1px 7px 0 #000, 0 0 2px 2px #fff;
+     }
+     .info-text1 {
+        font-size: 6em;
+        @media screen and (max-width: 600px){
+            font-size: 4em;
+        }
+     }
+     h5 {
+        font-size: 3em;
+        color: #bbb;
+        text-shadow: 1px 1px 2px #000;
+        @media screen and (max-width: 600px){
+            font-size: 2em;
+        }
+     }
+     input {
+        display: block;
+        width: 400px;
+        font-size: 4em;
+        margin: 20px auto;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 7px 0 #000;
+        @media screen and (max-width: 600px){
+            font-size: 3em;
+            width: 250px;
+        }
+     }
+     button {
+        width: 200px;
+        padding: 15px 5px;
+        border-radius: 10px;
+        @include linear-gradient(150deg, #ddd, #aaa);
+        font-size: 3em;
+        text-shadow: 1px 1px 1px #fff;
+        box-shadow: 1px 1px 7px 0 #000, inset 0 0 2px 2px #000;
+        &:hover {
+            box-shadow: 1px 1px 3px 0 #000, inset 0 0 2px 2px #000;
+            cursor: pointer;
+            @include linear-gradient(150deg, #bbb, #999);
+        }
+     }
+
+}
+
+.white-background {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0px #000, inset 0 0 5px 0 #000;
+    padding: 20px;
+    @media screen and (max-width: 800px){
+        border-radius: 0;
+        padding: 20px 10px;
+    }
+}
+.dark-background {
+    background: url(images/background5.jpg);
+    border-radius: 110px 20px 20px 110px;
+    margin: 0 auto;
+    display: block;
+    padding: 0px;
+    box-shadow: 1px 1px 7px 0 #000, inset 0 0 3px 2px #fff;
+    height: 220px;
+    h2 {
+        padding-top: 15px;
+    }
+    @media screen and (max-width: 1100px){
+        border-radius: 20px;
+        height: 220px;
+    }
+    @media screen and (max-width: 800px){
+        border-radius: 0;
+        box-shadow: 1px 1px 7px 0 #000, 0 0 2px 2px #fff;
+        height: 180px;
+        @include linear-gradient(150deg, #777, #333);
+    }
+}
+.compass {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    @media screen and (max-width: 1100px){
+        display: none;
     }
 }
 

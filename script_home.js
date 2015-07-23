@@ -1,6 +1,8 @@
+var currentItem = 1, $titleString;
 
-
-//Document is loaded
+$(window).ready(function(){
+	showText("#msg", "<Code Odessey/>", 0, 100); 
+});
 $(document).ready(function(){
 
 	$('.menu .courses').mouseenter(function(){
@@ -11,7 +13,9 @@ $(document).ready(function(){
 		$('.sub-menu').slideUp(200);
 	});
 
-
+	$('.css-basics').on("click", function(){
+    		var scroll = $(window).width();
+	});
 
 
 
@@ -69,40 +73,78 @@ $(document).ready(function(){
 	}).mouseout(function() {
 		$('.css-basics').find('p').html("CSS Basics");
     });
-    
 
-	//Start Welcome and course recommendation sliding text
-	slideText();
+    $('.css-intermediate').mouseover(function() {
+		buttonAnimate("Take your CSS to the next level! Coming soon!", this);
+	}).mouseout(function() {
+		$('.css-intermediate').find('p').html("CSS Intermediate");
+    });
+
+    $('.javascript-basics').mouseover(function() {
+		buttonAnimate("Take even more control of your site with Javascript Basics! Comming soon!", this);
+	}).mouseout(function() {
+		$('.javascript-basics').find('p').html("Javascript Basics");
+    });
+
+    $('.sass-basics').mouseover(function() {
+		buttonAnimate("Syntactically awesome stylesheets, your css on steriods! Comming soon!", this);
+	}).mouseout(function() {
+		$('.sass-basics').find('p').html("Sass Basics");
+    });
+
+	//Start Welcome and course recommendation sliding text.
+	slideText(5000);
+	//Title text in animation. Display one character at a time.
+	//showText("#msg", "<Code Odessey/>", 0, 100); 
+
 
 });
-//Welcome text and recommendations for courses animated sliding text
-function slideText(){
-     $('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
-     	$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
-     		$('.text-slide').html("Are you just starting out?<br> Try our HTML Basics course.");
-     		$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
-     			$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
-     				$('.text-slide').html("Need something more advanced?<br>Check out the CSS Intermediate course.");
-     				$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
-     					$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
-		     				$('.text-slide').html("All access granted immediately.<br>Skip ahead, review, or learn only what you want.");
-		     				$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
-		     					$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
-				     				$('.text-slide').html("All our courses are completely free!<br>Learn at your own pace.");
-				     				$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, function(){
-				     					$('.text-slide').delay(5000).transition({"left":"-500px"}, 1000, function(){
-					     					$('.text-slide').html("More courses coming soon!<br>Stay tuned in.");
-					     					$('.text-slide').css({"left":"500px"}).transition({"left":"0px"}, 1000, slideText());
-					     				});
-				     				});
-				     			});
 
-			     			});
-		     			});
-     				});
-     			});
-     			
-     		});
-     	});
-     });
+
+
+function buttonAnimate($string1, $paramObject){
+	$($paramObject).find('p').transition({
+			  perspective: '500px',
+			  rotateY: '-90deg',
+			  rotateX: '-90deg'
+			},200, function(){
+				$($paramObject).find('p').html($string1);
+				$($paramObject).find('p').transition({
+			 		 perspective: '500px',
+			  		 rotateY: '0deg',
+			  		 rotateX: '0deg'
+				},200);
+			}
+		);
+}
+
+
+//Welcome text and recommendations for courses animated sliding text
+function slideText($time){
+	var i = 1;
+	setInterval(function(){ 
+		var listLength = $('.text-slide li').length;
+		if($('.text-slide span').length != 0){
+			$('.text-slide span').remove();
+		}
+		$('.text-slide li:nth-child('+i+')').css({"display":"block"}).addClass('translate-x-in').delay($time).queue(function(next){
+						$(this).css({"display":"none"});
+						next();
+					});
+		if(i>=listLength){
+			i=1;
+		}else{
+			i++;
+		}
+		
+	}, $time);
+}
+
+function showText (target, message, index, interval) {   
+  if(index < message.length) {
+    $(target).append(message[index++]);
+    setTimeout(function () {
+        showText(target, message, index, interval); 
+    }, interval);
+  }
 }
