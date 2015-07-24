@@ -23,21 +23,19 @@ html, body {
     right: 0;
 }
 body {
-    background: url(images/mountain1.jpg);
+    background: url(images/background4.jpg);
 }
 
 
 div.header {
-    @include linear-gradient(90deg, #222, #333);
     width: 100%;
-    box-shadow: 0 0 15px 0 #000, inset 0 0 50px 5px #000, inset 0 -2px 10px 2px #000;
-    border-bottom: 2px solid #ddd;
     cursor: pointer;
     h1 {
         color: #fff;
-        padding: 7px;
-        font-size: 5em;
+        padding: 4px;
+        font-size: 3em;
         text-shadow: 1px 1px 5px #000;
+        
     }
 }
 
@@ -45,30 +43,25 @@ div.footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    @include linear-gradient(90deg, #222, #333);
     width: 100%;
-    box-shadow: 0 0 15px 0 #000, inset 0 0 20px 2px #000;
-    border-top: 1px solid #999;
     h2 {
         color: #fff;
-        margin: 10px;
+        margin: 3px;
         text-shadow: 1px 1px 5px #000;
     }
 }
 
 div.wrapper {
     width: 1200px;
-    height: 500px;
-    margin: 10px auto 70px auto;
-    padding: 10px;
-
+    height: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
     @media screen and (max-width: 1000px) {
             width: 100%;
-            padding: 0;
+            height: auto;
         }
 
     @media screen and (min-height: 800px) {
-            margin-top: 100px;
         }
 
     .side-menu {
@@ -77,16 +70,16 @@ div.wrapper {
         height: 100%;
         text-align: center;
         border-radius: 20px;
-        padding: 10px;
-        border: 2px solid #999;
-        @include linear-gradient(90deg, #aaa, #ccc);
-        box-shadow: 2px 2px 20px 5px #000, inset 0 0 100px 0 #000;
+        padding: 0 10px;
+        box-shadow: 1px 1px 7px 2px #000, inset 0 0 2px 2px #999;
+        @include linear-gradient(130deg, #777, #333);
         @media screen and (max-width: 1000px){
             display: none;
         }
         h4 {
+            margin-top: 10px;
             font-size: 3.5em;
-            color: #333;
+            color: #eee;
             text-shadow: 1px 1px 5px #555;
         }
 
@@ -100,16 +93,17 @@ div.wrapper {
 
                 div {
                     border-radius: 5px;
-                    background: url(images/darkwood2.jpg);
                     font-size: 2.5em;
                     padding: 5px;
-                    box-shadow: 2px 2px 10px 0 #000, inset 0 0 30px 5px #222;
+                    box-shadow: 1px 1px 5px 0 #000;
                     color: #ddd;
                     text-shadow: 1px 1px 2px #000;
                     cursor: pointer;
+                    @include linear-gradient(90deg, #777, #555);
                     &:hover {
                         @include linear-gradient(90deg, #ddd, #eee);
-                        color: #000;
+                        color: #555;
+                        text-shadow: 1px 1px 1px #999;
                     }
                 }
             }
@@ -118,26 +112,32 @@ div.wrapper {
     div.main-content {
         float: right;
         width: 870px;
-        min-height: 460px;
-        @include linear-gradient(#111, #333);
+        @include linear-gradient(150deg, #eee, #999);
         border-radius: 20px;
-        padding: 30px;
-        box-shadow: 2px 2px 20px 5px #000, inset 0 0 20px 5px #000;
-        border: 2px solid #999;
-        margin-bottom: 50px;
+        padding: 0 30px;
+        height: 100%;
+        box-shadow: 2px 2px 7px 2px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 1px #000;
+        overflow-Y: auto;
         @media screen and (max-width: 1000px){
             float: none;
+            position: fixed;
+            top: 32px;
+            bottom: 0px;
+            right: 0;
+            left: 0;
             margin: 0 auto;
-            width: 90%;
-            padding: 10px;
+            width: 92%;
+            padding: 0 10px;
+            height: 87%;
         }
 
         h2 {
             color: #2781C6;
-            text-shadow: 2px 2px 2px #000;
+            text-shadow: 1px 1px 2px #000;
             font-size: 5em;
             font-weight: bold;
             margin-bottom: 20px;
+            margin-top: 10px;
             @media screen and (max-width: 600px){
                 font-size: 3.5em;
             }
@@ -168,7 +168,8 @@ div.wrapper {
             margin-top: 50px;
         }
         h4 {
-            color: #ddd;
+            color: #222;
+            text-shadow: 1px 1px 1px #555;
             font-size: 2.5em;
             @media screen and (max-width: 600px){
                 font-size: 2.2em;
@@ -201,17 +202,19 @@ div.wrapper {
         }
         button {
             margin-top: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            background: #060F15;
-            color: #fff;
-            text-shadow: 1px 1px 2px #000;
-            box-shadow: 2px 2px 5px 0 #000;
-            cursor: pointer;
+            margin-bottom: 20px;
+            width: 150px;
+            padding: 15px 5px;
+            border-radius: 10px;
+            @include linear-gradient(150deg, #ddd, #aaa);
+            font-size: 2.5em;
+            text-shadow: 1px 1px 1px #fff;
+            box-shadow: 1px 1px 7px 0 #000, inset 0 0 2px 1px #000;
             &:hover {
-                        @include linear-gradient(90deg, #ddd, #eee);
-                        color: #000;
-                    }
+                box-shadow: 1px 1px 3px 0 #000, inset 0 0 2px 1px #000;
+                cursor: pointer;
+                @include linear-gradient(150deg, #bbb, #999);
+            }
         }
     }
 }
