@@ -3,7 +3,7 @@ html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p, button, span 
   padding: 0;
   border: 0;
   font-weight: normal;
-  font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   list-style-type: none; }
 
 html, body {
@@ -61,7 +61,10 @@ div.header {
   height: 60px; }
   @media screen and (max-width: 500px) {
     div.header {
-      height: 40px; } }
+      height: 40px;
+      padding-bottom: 10px;
+      background: #333;
+      box-shadow: inset 1px 1px 5px 1px #000; } }
   div.header h1 {
     color: #fff;
     padding: 7px;
@@ -93,7 +96,8 @@ div.header {
     margin-right: 10px;
     display: none;
     top: -12px;
-    position: relative; }
+    position: relative;
+    text-shadow: 2px 2px 2px #000; }
     div.header div.menu-button:hover {
       cursor: pointer;
       color: #2781C6; }
@@ -122,12 +126,12 @@ div.header {
         color: #2781C6; }
   div.header .sub-menu {
     display: none;
-    position: absolute;
     background-color: #333;
-    margin-top: 10px; }
+    position: absolute;
+    z-index: 2; }
     div.header .sub-menu li {
       display: block;
-      font-size: 0.6em;
+      font-size: 0.8em;
       color: #fff; }
       div.header .sub-menu li:hover {
         color: #2781C6; }
@@ -176,10 +180,13 @@ div.wrapper {
     div.wrapper {
       margin: 10px auto 0 auto;
       width: 100%; } }
+  @media screen and (max-width: 500px) {
+    div.wrapper {
+      margin: 0 auto; } }
   div.wrapper h2 {
     text-align: center;
     color: #2781C6;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 2px #000;
     font-size: 5.5em;
     font-weight: bold;
     margin-bottom: 10px; }
@@ -204,7 +211,7 @@ div.wrapper {
     text-align: center;
     padding: 40px 10px 100px 10px;
     border-radius: 110px 20px 20px 250px;
-    box-shadow: 1px 1px 7px 0 #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
+    box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
     background: -webkit-linear-gradient(90deg, #eee, #999);
     background: -o-linear-gradient(90deg, #eee, #999);
     background: -moz-linear-gradient(90deg, #eee, #999);
@@ -216,14 +223,14 @@ div.wrapper {
     @media screen and (max-width: 800px) {
       div.wrapper div.side-menu {
         border-radius: 10px;
-        box-shadow: 1px 1px 7px 1px #000, 0 0 2px 2px #fff;
+        box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
         margin-top: 20px;
         padding-bottom: 40px; } }
     div.wrapper div.side-menu h4 {
       font-size: 6em;
       color: #555;
       font-weight: bold;
-      text-shadow: 1px 1px 2px #999; }
+      text-shadow: 1px 1px 2px #555; }
       @media screen and (max-width: 500px) {
         div.wrapper div.side-menu h4 {
           font-size: 4em; } }
@@ -329,7 +336,7 @@ div.wrapper {
 .information {
   text-align: center;
   border-radius: 250px 20px 20px 20px;
-  box-shadow: 1px 1px 7px 0 #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
+  box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
   background: -webkit-linear-gradient(150deg, #777, #333);
   background: -o-linear-gradient(150deg, #777, #333);
   background: -moz-linear-gradient(150deg, #777, #333);
@@ -341,7 +348,7 @@ div.wrapper {
   @media screen and (max-width: 800px) {
     .information {
       border-radius: 10px;
-      box-shadow: 1px 1px 7px 1px #000, 0 0 2px 2px #fff; } }
+      box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff; } }
   .information .info-text1 {
     font-size: 6em; }
     @media screen and (max-width: 600px) {
@@ -402,7 +409,7 @@ div.wrapper {
   display: block;
   padding: 0px;
   height: 220px;
-  box-shadow: 1px 1px 7px 0 #000, inset 0 0 3px 2px #fff; }
+  box-shadow: 1px 1px 5px 1px #000, inset 0 0 3px 2px #fff; }
   .dark-background h2 {
     padding-top: 15px; }
   @media screen and (max-width: 1100px) {
@@ -413,7 +420,7 @@ div.wrapper {
       padding: 10px;
       height: auto;
       border-radius: 10px;
-      box-shadow: 1px 1px 7px 1px #000, 0 0 2px 2px #fff;
+      box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
       background: -webkit-linear-gradient(150deg, #555, #222);
       background: -o-linear-gradient(150deg, #555, #222);
       background: -moz-linear-gradient(150deg, #555, #222);

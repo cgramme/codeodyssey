@@ -56,7 +56,7 @@
 
 .jspDrag
 {
-	background: #bbd;
+	background: #ddd;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -73,7 +73,7 @@
 
 .jspArrow
 {
-	background: #bbd;
+	background: #ddd;
 	text-indent: -20000px;
 	display: block;
 	cursor: pointer;

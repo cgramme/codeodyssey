@@ -1,115 +1,58 @@
-var currentItem = 1, $titleString;
-
-$(window).ready(function(){
+$(window).load(function(){
 	showText("#msg", "<Code Odessey/>", 0, 100); 
 });
 $(document).ready(function(){
-
 	$('.menu .courses').mouseenter(function(){
 		$('.sub-menu').slideDown(200);
 	});
-
-	$('.menu').mouseleave(function(){
+	$('.menu .courses').mouseleave(function(){
 		$('.sub-menu').slideUp(200);
 	});
-
-	$('.css-basics').on("click", function(){
-    		var scroll = $(window).width();
-	});
-
-
-
-	//HTML Basics click to start course
+	//Course buttons below
     $('.html-basics').mouseover(function() {
-		$('.html-basics').find('p').transition({
-			  perspective: '500px',
-			  rotateY: '-90deg',
-			  rotateX: '-90deg'
-			},200, function(){
-				$('.html-basics').find('p').html("Learn the basic principles of the foundational web language HTML.");
-				$('.html-basics').find('p').transition({
-			 		 perspective: '500px',
-			  		 rotateY: '0deg',
-			  		 rotateX: '0deg'
-				},200);
-			}
-		);
+		buttonAnimate("Learn the basic principles of the foundational web language HTML.", this);
 	}).mouseout(function() {
-		$('.html-basics').find('p').html("HTML Basics");
+		buttonAnimate("HTML Basics", this);
     });
-	//HTML Intermediate click to start course
     $('.html-intermediate').mouseover(function() {
-		$('.html-intermediate').find('p').transition({
-			  perspective: '500px',
-			  rotateY: '-90deg',
-			  rotateX: '-90deg'
-			},200, function(){
-				$('.html-intermediate').find('p').html("Take your basic knowledge of HTML to the next level with this HTML intermediate guide.");
-				$('.html-intermediate').find('p').transition({
-			 		 perspective: '500px',
-			  		 rotateY: '0deg',
-			  		 rotateX: '0deg'
-				},200);
-			}
-		);
+		buttonAnimate("Take your basic knowledge of HTML to the next level with this HTML intermediate guide. Coming soon!", this);
 	}).mouseout(function() {
-		$('.html-intermediate').find('p').html("HTML Intermediate");
+		buttonAnimate("HTML Intermediate", this);
     });
-	//CSS Basics click to start course
 	$('.css-basics').mouseover(function() {
-		$('.css-basics').find('p').transition({
-			  perspective: '500px',
-			  rotateY: '-90deg',
-			  rotateX: '-90deg'
-			},200, function(){
-				$('.css-basics').find('p').html("Add style to your HTML with this CSS basics course.");
-				$('.css-basics').find('p').transition({
-			 		 perspective: '500px',
-			  		 rotateY: '0deg',
-			  		 rotateX: '0deg'
-				},200);
-			}
-		);
+		buttonAnimate("Add style to your HTML with this CSS basics course. Coming soon!", this);
 	}).mouseout(function() {
-		$('.css-basics').find('p').html("CSS Basics");
+		buttonAnimate("CSS Basics", this);
     });
-
     $('.css-intermediate').mouseover(function() {
 		buttonAnimate("Take your CSS to the next level! Coming soon!", this);
 	}).mouseout(function() {
-		$('.css-intermediate').find('p').html("CSS Intermediate");
+		buttonAnimate("CSS Intermediate", this);
     });
-
     $('.javascript-basics').mouseover(function() {
 		buttonAnimate("Take even more control of your site with Javascript Basics! Comming soon!", this);
 	}).mouseout(function() {
-		$('.javascript-basics').find('p').html("Javascript Basics");
+		buttonAnimate("Javascript Basics", this);
     });
-
     $('.sass-basics').mouseover(function() {
 		buttonAnimate("Syntactically awesome stylesheets, your css on steriods! Comming soon!", this);
 	}).mouseout(function() {
-		$('.sass-basics').find('p').html("Sass Basics");
+		buttonAnimate("Sass Basics", this);
     });
-
-	//Start Welcome and course recommendation sliding text.
+	//Start Welcome message and course recommendation sliding text
 	slideText(5000);
-	//Title text in animation. Display one character at a time.
-	//showText("#msg", "<Code Odessey/>", 0, 100); 
-
-
 });
-
-
-
-function buttonAnimate($string1, $paramObject){
-	$($paramObject).find('p').transition({
+//course transition animation
+//string1 sets text to be displayed after animation
+//paramObject should be set to "this"
+function buttonAnimate(string1, paramObject){
+	$(paramObject).find('p').transition({
 			  perspective: '500px',
 			  rotateY: '-90deg',
 			  rotateX: '-90deg'
 			},200, function(){
-				$($paramObject).find('p').html($string1);
-				$($paramObject).find('p').transition({
+				$(paramObject).find('p').html(string1);
+				$(paramObject).find('p').transition({
 			 		 perspective: '500px',
 			  		 rotateY: '0deg',
 			  		 rotateX: '0deg'
@@ -117,17 +60,16 @@ function buttonAnimate($string1, $paramObject){
 			}
 		);
 }
-
-
 //Welcome text and recommendations for courses animated sliding text
-function slideText($time){
+//time variable sets pause between each message
+function slideText(time){
 	var i = 1;
 	setInterval(function(){ 
 		var listLength = $('.text-slide li').length;
 		if($('.text-slide span').length != 0){
 			$('.text-slide span').remove();
 		}
-		$('.text-slide li:nth-child('+i+')').css({"display":"block"}).addClass('translate-x-in').delay($time).queue(function(next){
+		$('.text-slide li:nth-child('+i+')').css({"display":"block"}).addClass('translate-x-in').delay(time).queue(function(next){
 						$(this).css({"display":"none"});
 						next();
 					});
@@ -135,11 +77,14 @@ function slideText($time){
 			i=1;
 		}else{
 			i++;
-		}
-		
-	}, $time);
+		}	
+	}, time);
 }
-
+//display one string text character at a time
+//target is the element to be filled with text
+//message is the string to be displayed one character at a time
+//index should be set to 0
+//interval is the time in milliseconds between each character dispalyed
 function showText (target, message, index, interval) {   
   if(index < message.length) {
     $(target).append(message[index++]);
