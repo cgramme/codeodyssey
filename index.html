@@ -4,24 +4,23 @@
 	<title>Code Odyssey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="stylesheet" href="main.css" type='text/css'/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Raleway:400,300,700'rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:500|Open+Sans+Condensed:300'rel='stylesheet' type='text/css'/>
 </head>
 <body>
 	<div class="header">
-		<ul class="menu">
-			<li class="courses">Courses
-				<ul class="sub-menu">
-					<li>HTML Basics</li>
-					<li>HTML Intermediate</li>
-					<li>CSS Basics</li>
-					<li>CSS Intermediate</li>
-					<li>Javascript Basics</li>
-					<li>Sass Basics</li>
-				</ul>
-			</li>
+		<ul id="menu" class="menu">
+			<li class="courses">Courses</li>
 			<li>Contact</li>
 			<li>About</li>
 			<li>Sign In</li>
+		</ul>
+		<ul class="sub-menu">
+			<li>HTML Basics</li>
+			<li>HTML Intermediate</li>
+			<li>CSS Basics</li>
+			<li>CSS Intermediate</li>
+			<li>Javascript Basics</li>
+			<li>Sass Basics</li>
 		</ul>
 		<img src="images/compass.png" alt ="compass"/>
 		<div class="menu-button"><p>_<br>_<br>_</p></div>
@@ -30,21 +29,23 @@
 	<div class="wrapper">
 		<div class="white-background">
 			<div class="dark-background">
-				<img class="compass" src="images/compass.png" alt ="compass"/>
-				<h2>Your web-development journey begins now!</h2>
+					<img class="left compass" src="images/compass.png" alt ="compass"/>
+					<div class="right map" alt="map image"></div>
+				<h2 class="first-text">Your web-development journey begins now!</h2>
 				<h4>Code Odyssey makes learning web-development easy and convenient, through step by step tutorials.</h4>
 				<div class="main-content">
 					<div class="slide-contain">
 						<ul class="text-slide">
-							<span class="starting-text">Get your code on!<br>Learn today!</span>
+							<span class="starting-text">Get your code on!<br>Start learning today!</span>
 							<li><p>All our courses are completely free!<br>Learn at your own pace.</p></li>
 							<li><p>Are you just starting out?<br>Try our HTML Basics course.</p></li>
-							<li><p>Help me I can't get out!<br> I'm trapped in the matrix!</p></li>
+							<li><p>Try any course you want,<br>when you want!</p></li>
 							<li><p>Learn to style your HTML.<br>Try our CSS basics coures</p></li>
-                            <li><p>Hot dogs are the best!<br>Mmmmmmmmmmmmmmmmm</p></li>
+                            <li><p>From beginner to advanced.<br>Brush up on your skills!</p></li>
 						</ul>
 					</div>
 				</div>
+				<div class="clear"></div>
 			</div>
 			<div class="side-menu">
 				<h4>Start learning now</h4>
@@ -71,8 +72,6 @@
 		<h2 class="left">Copyright &copy; Chris Gramme 2015</h2>
 		<h2 class="right">Contact Developer</h2>
 	</div>
-
-
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
 	<script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js" type='text/javascript'></script>
     <script type='text/javascript' src='script_home.js'></script>

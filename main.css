@@ -3,7 +3,7 @@ html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p, button, span 
   padding: 0;
   border: 0;
   font-weight: normal;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Open Sans",Sans-serif,Helvetica,Arial,sans-serif;
   list-style-type: none; }
 
 html, body {
@@ -56,6 +56,11 @@ html, body {
     transform: scale(1); }
   to {
     transform: scale(1.03); } }
+@keyframes treasure {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -2100px 0; } }
 div.header {
   width: 100%;
   height: 60px; }
@@ -63,11 +68,11 @@ div.header {
     div.header {
       height: 40px;
       padding-bottom: 10px;
-      background: #333;
-      box-shadow: inset 1px 1px 5px 1px #000; } }
+      background: #111; } }
   div.header h1 {
     color: #fff;
     padding: 7px;
+    padding-top: 13px;
     font-size: 6em;
     text-shadow: 2px 2px 2px #000;
     font-weight: bold;
@@ -75,7 +80,12 @@ div.header {
     display: inline-block; }
     @media screen and (max-width: 500px) {
       div.header h1 {
-        font-size: 4em; } }
+        font-size: 4em;
+        padding-top: 10px; } }
+    @media screen and (max-width: 350px) {
+      div.header h1 {
+        font-size: 3em;
+        padding-top: 15px; } }
   div.header img {
     height: 70px;
     width: 70px;
@@ -108,33 +118,54 @@ div.header {
       div.header div.menu-button {
         top: -20px; } }
   div.header .menu {
-    float: right;
-    margin-right: 20px;
-    padding-top: 10px; }
+    margin-right: 40px;
+    padding-top: 10px;
+    position: absolute;
+    right: 0px; }
     @media screen and (max-width: 800px) {
       div.header .menu {
-        display: none; } }
-    div.header .menu li {
-      display: inline-block;
-      font-size: 3.5em;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        background: #111; } }
+    @media screen and (max-width: 500px) {
+      div.header .menu {
+        top: 50px; } }
+  div.header li {
+    position: relative;
+    display: inline-block;
+    font-size: 3.5em;
+    color: #555;
+    font-weight: bold;
+    margin: 15px -10px 0 0;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #777;
+    background: #fff;
+    padding: 10px 20px 20px 20px;
+    border-radius: 20px 20px 0 0;
+    z-index: 1;
+    box-shadow: 2px 2px 10px 0px #000, inset 0 0 5px 0 #000; }
+    @media screen and (max-width: 500px) {
+      div.header li {
+        font-size: 2.5em; } }
+    div.header li:hover {
       color: #fff;
-      font-weight: bold;
-      margin: 15px 20px 10px 5px;
-      cursor: pointer;
-      text-shadow: 1px 1px 2px #000; }
-      div.header .menu li:hover {
-        color: #2781C6; }
+      z-index: 2;
+      background: #2781c6; }
   div.header .sub-menu {
-    display: none;
-    background-color: #333;
+    margin-right: 40px;
+    padding: 10px;
     position: absolute;
-    z-index: 2; }
+    right: 0px; }
     div.header .sub-menu li {
-      display: block;
-      font-size: 0.8em;
-      color: #fff; }
-      div.header .sub-menu li:hover {
-        color: #2781C6; }
+      margin-top: 20px;
+      padding: 15px 20px 20px 30px;
+      font-size: 2em;
+      top: 100px; }
 
 div.footer {
   margin-top: 70px;
@@ -186,27 +217,31 @@ div.wrapper {
   div.wrapper h2 {
     text-align: center;
     color: #2781C6;
-    text-shadow: 1px 1px 2px #000;
-    font-size: 5.5em;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 5em;
     font-weight: bold;
     margin-bottom: 10px; }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       div.wrapper h2 {
         font-size: 4em; } }
     @media screen and (max-width: 700px) {
       div.wrapper h2 {
         font-size: 3.5em; } }
+  div.wrapper h2.first-text {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 6em;
+    text-shadow: 1px 1px 1px #000; }
   div.wrapper h4 {
     text-align: center;
-    color: #ddd;
+    color: #ccc;
     font-size: 2.5em;
     text-shadow: 1px 1px 2px #000;
     margin-bottom: 5px; }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       div.wrapper h4 {
         font-size: 2em; } }
   div.wrapper div.side-menu {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
     text-align: center;
     padding: 40px 10px 100px 10px;
@@ -230,7 +265,7 @@ div.wrapper {
       font-size: 6em;
       color: #555;
       font-weight: bold;
-      text-shadow: 1px 1px 2px #555; }
+      text-shadow: 1px 1px 2px #fff; }
       @media screen and (max-width: 500px) {
         div.wrapper div.side-menu h4 {
           font-size: 4em; } }
@@ -289,33 +324,13 @@ div.wrapper {
             border-radius: 10px;
             padding: 10px; }
   div.wrapper div.main-content {
-    margin-top: 0px;
     text-align: center;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 5px; }
     div.wrapper div.main-content .slide-contain {
       overflow: hidden;
-      width: 700px;
-      margin: 5px auto;
-      padding: 20px; }
-      @media screen and (max-width: 800px) {
-        div.wrapper div.main-content .slide-contain {
-          width: 85%;
-          background: -webkit-linear-gradient(150deg, #222, #111);
-          background: -o-linear-gradient(150deg, #222, #111);
-          background: -moz-linear-gradient(150deg, #222, #111);
-          background: linear-gradient(150deg, #222, #111);
-          box-shadow: 1px 1px 1px 0 #999, inset 1px 1px 10px 2px #000;
-          border-radius: 10px;
-          height: 60px; } }
-      @media screen and (max-width: 650px) {
-        div.wrapper div.main-content .slide-contain {
-          height: 45px; } }
-      @media screen and (max-width: 500px) {
-        div.wrapper div.main-content .slide-contain {
-          height: 35px; } }
-      @media screen and (max-width: 370px) {
-        div.wrapper div.main-content .slide-contain {
-          width: 80%; } }
+      max-width: 700px;
+      margin: 5px auto; }
       div.wrapper div.main-content .slide-contain .text-slide {
         position: relative;
         display: inline-block;
@@ -349,10 +364,12 @@ div.wrapper {
     .information {
       border-radius: 10px;
       box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff; } }
-  .information .info-text1 {
-    font-size: 6em; }
+  .information h4.info-text1 {
+    font-size: 6em;
+    color: #222;
+    text-shadow: 1px 1px 1px #999; }
     @media screen and (max-width: 600px) {
-      .information .info-text1 {
+      .information h4.info-text1 {
         font-size: 4em; } }
   .information h5 {
     font-size: 3em;
@@ -393,6 +410,8 @@ div.wrapper {
       background: linear-gradient(150deg, #bbb, #999); }
 
 .white-background {
+  position: relative;
+  z-index: 10;
   background: #fff;
   border-radius: 20px;
   box-shadow: 2px 2px 10px 0px #000, inset 0 0 5px 0 #000;
@@ -400,39 +419,43 @@ div.wrapper {
   @media screen and (max-width: 800px) {
     .white-background {
       border-radius: 0;
-      padding: 20px 10px; } }
+      padding: 20px 10px;
+      box-shadow: none; } }
 
 .dark-background {
   background: url(images/background5.jpg);
   border-radius: 110px 20px 20px 110px;
-  margin: 0 auto;
   display: block;
-  padding: 0px;
-  height: 220px;
-  box-shadow: 1px 1px 5px 1px #000, inset 0 0 3px 2px #fff; }
-  .dark-background h2 {
-    padding-top: 15px; }
+  padding: 20px;
+  height: 170px;
+  box-shadow: 0px 0px 5px 0px #000;
+  box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000; }
   @media screen and (max-width: 1100px) {
     .dark-background {
-      border-radius: 20px; } }
+      border-radius: 20px;
+      height: auto; } }
   @media screen and (max-width: 800px) {
     .dark-background {
-      padding: 10px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
-      background: -webkit-linear-gradient(150deg, #555, #222);
-      background: -o-linear-gradient(150deg, #555, #222);
-      background: -moz-linear-gradient(150deg, #555, #222);
-      background: linear-gradient(150deg, #555, #222); } }
+      border-radius: 10px; } }
 
 .compass {
   float: left;
-  width: 200px;
-  height: 200px;
-  margin: 10px; }
+  width: 170px;
+  height: 170px; }
   @media screen and (max-width: 1100px) {
     .compass {
+      display: none; } }
+
+.map {
+  float: right;
+  background: url("images/map_sprite_small.png");
+  -webkit-animation: treasure 10s steps(14) infinite;
+  animation: treasure 10s steps(14) infinite;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px; }
+  @media screen and (max-width: 800px) {
+    .map {
       display: none; } }
 
 .left {

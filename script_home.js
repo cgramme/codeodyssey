@@ -1,12 +1,18 @@
+
 $(window).load(function(){
-	showText("#msg", "<Code Odessey/>", 0, 100); 
+	showText("#msg", "<Code Odessey/>", 0, 100);
 });
 $(document).ready(function(){
 	$('.menu .courses').mouseenter(function(){
-		$('.sub-menu').slideDown(200);
+		listOut($('.menu li'), 0, 50);
+		listIn($('.sub-menu li'), 0, 50);
 	});
-	$('.menu .courses').mouseleave(function(){
-		$('.sub-menu').slideUp(200);
+	$('.sub-menu').mouseleave(function(){
+		listIn($('.menu li'), 0, 50);
+		listOut($('.sub-menu li'), 0, 50);
+	});
+	$('.menu-button').on('click', function(){
+		$('.menu').slideToggle(200);
 	});
 	//Course buttons below
     $('.html-basics').mouseover(function() {
@@ -90,6 +96,22 @@ function showText (target, message, index, interval) {
     $(target).append(message[index++]);
     setTimeout(function () {
         showText(target, message, index, interval); 
+    }, interval);
+  }
+}
+function listOut (list, index, interval) {
+	if(index < list.length) {
+    $(list[index++]).css({"top":"100px"});
+    setTimeout(function () {
+        listOut(list, index, interval); 
+    }, interval);
+  }
+}
+function listIn (list, index, interval) {
+	if(index < list.length) {
+    $(list[index++]).css({"top":"0px"});
+    setTimeout(function () {
+        listIn(list, index, interval);
     }, interval);
   }
 }
