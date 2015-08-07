@@ -40,24 +40,60 @@ html, body {
    80% {@include addTranslateX(0px)}
    100% {@include addTranslateX(-700px)}
 }
+@keyframes translateXin {
+   0% {@include addTranslateX(1500px)}
+   20% {@include addTranslateX(-10px)}
+   25% {@include addTranslateX(0px)}
+   80% {@include addTranslateX(0px)}
+   100% {@include addTranslateX(-700px)}
+}
 .translate-x-in {
-    -webkit-animation-name: translateXin;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-fill-mode: forwards;
+    -webkit-animation: translateXin 5s forwards;
+    animation: translateXin 5s forwards;
 }
 @-webkit-keyframes buttonZoom {
-   from{transform: scale(1);
-}
+   from{transform: scale(1);}
    to{transform: scale(1.03);}
 }
 @keyframes buttonZoom {
-   from{transform: scale(1);
-}
+   from{transform: scale(1);}
    to{transform: scale(1.03);}
 }
 @keyframes treasure {
     from{ background-position: 0 0}
     to{ background-position: -2100px 0}
+}
+@-webkit-keyframes menuHoverAnima {
+   to{-webkit-transform: translateY(-5px);}
+}
+@keyframes menuHoverAnima {
+   to{transform: translateY(-5px);}
+}
+
+@keyframes listOutAnima {
+   from{top: 0;}
+   to{top: 100px;}
+}
+@-webkit-keyframes listOutAnima {
+   from{top: 0;}
+   to{top: 100px;}
+}
+
+@keyframes listInAnima {
+   from{top: 100px;}
+   to{top: 0;}
+}
+@-webkit-keyframes listInAnima {
+   from{top: 100px;}
+   to{top: 0;}
+}
+.list-out-anima {
+    -webkit-animation: listOutAnima 0.2s forwards;
+    animation: listOutAnima 0.2s forwards;
+}
+.list-in-anima {
+    -webkit-animation: listInAnima 0.2s forwards;
+    animation: listInAnima 0.2s forwards;
 }
 div.header {
     width: 100%;
@@ -121,7 +157,7 @@ div.header {
     }
     .menu {
         margin-right: 40px;
-        padding-top: 10px;
+        padding-top: 12px;
         position: absolute;
         right: 0px;
         @media screen and (max-width: 800px) {
@@ -140,6 +176,7 @@ div.header {
     }
     li {
             position: relative;
+            top: 100px;
             display: inline-block;
             font-size: 3.5em;
             color: #555;
@@ -159,16 +196,36 @@ div.header {
                 color: #fff;
                 z-index: 2;
                 background: #2781c6;
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+                //-webkit-animation: menuHoverAnima 0.2s forwards;
+                //animation: menuHoverAnima 0.2s forwards;
             }
         }
-    .sub-menu {
+    .course-menu {
+        opacity: 0;
         margin-right: 40px;
         padding: 10px;
         position: absolute;
         right: 0px;
         li {
             margin-top: 20px;
-            padding: 15px 20px 20px 30px;
+            padding: 15px 20px 20px 10px;
+            font-size: 2em;
+            top: 100px;
+            &:hover {
+            }
+        }
+    }
+    .signin-menu {
+        opacity: 0;
+        margin-right: 250px;
+        padding: 10px;
+        position: absolute;
+        right: 0px;
+        li {
+            margin-top: 20px;
+            padding: 15px 20px 20px 10px;
             font-size: 2em;
             top: 100px;
             &:hover {
@@ -237,12 +294,15 @@ div.wrapper {
     }
     h2.first-text {
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 6em;
+        font-size: 7em;
         text-shadow: 1px 1px 1px #000;
+        @media screen and (max-width: 950px) {
+            font-size: 6em;
+        }
     }
     h4 {
         text-align: center;
-        color: #ccc;
+        color: #999;
         font-size: 2.5em;
         text-shadow: 1px 1px 2px #000;
         margin-bottom: 5px;
@@ -322,9 +382,8 @@ div.wrapper {
                     cursor: pointer;
                     display: table-cell;
                     &:hover {
-                        -webkit-animation-name: buttonZoom;
-                        -webkit-animation-duration: 0.5s;
-                        -webkit-animation-fill-mode: forwards;
+                        -webkit-animation: buttonZoom 0.5s forwards;
+                        animation: buttonZoom 0.5s forwards;
                         box-shadow: 2px 2px 12px 0px #000;
                         border: 2px solid transparent;
                     }
@@ -347,12 +406,25 @@ div.wrapper {
     }
     div.main-content {
         text-align: center;
-        overflow: hidden;
-        padding: 5px;
+        margin: 0 auto;
+        display: block;
         .slide-contain {
+            text-align: center;
             overflow: hidden;
             max-width: 700px;
-            margin: 5px auto;
+            margin: auto;
+            padding-top: 10px;
+            height: 65px;
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+                /* IE10+ specific styles go here */ 
+                display: inline-block; 
+            }
+            @media screen and (max-width: 650px) {
+                height: 50px;
+            }
+            @media screen and (max-width: 500px) {
+                height: 40px;
+            }
             .text-slide {
                 position: relative;
                 display: inline-block;
