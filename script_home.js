@@ -1,3 +1,6 @@
+$(window).resize(function(){
+	$('.menu').show();
+});
 $(window).load(function(){
 	showText("#msg", "<Code Odessey/>", 0, 100);
 	listSetup();
@@ -75,7 +78,7 @@ function showText (target, message, index, interval) {
 //listOut will remove list from view by moving item down one at a time
 function listOut (list, index, interval) {
 	if(index < list.length) {
-    $(list[index++]).removeClass('list-in-anima').addClass('list-out-anima').hide();
+    $(list[index++]).removeClass('list-in-anima').addClass('list-out-anima').parent().hide();
     setTimeout(function () {
         listOut(list, index, interval); 
     }, interval);
@@ -84,7 +87,7 @@ function listOut (list, index, interval) {
 //listIn will show each list item one at a time by moving to original position
 function listIn (list, index, interval) {
 	if(index < list.length) {
-    $(list[index++]).removeClass('list-out-anima').addClass('list-in-anima').show();
+    $(list[index++]).removeClass('list-out-anima').addClass('list-in-anima').parent().show();
     setTimeout(function () {
         listIn(list, index, interval);
     }, interval);
