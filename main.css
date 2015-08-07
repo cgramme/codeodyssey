@@ -178,6 +178,7 @@ div.header {
       div.header div.menu-button {
         top: -20px; } }
   div.header .menu {
+    opacity: 0;
     margin-right: 40px;
     padding-top: 12px;
     position: absolute;
@@ -192,6 +193,9 @@ div.header {
         text-align: center;
         width: 100%;
         background: #111; } }
+    @media screen and (max-width: 500px) {
+      div.header .menu {
+        top: 50px; } }
   div.header li {
     position: relative;
     top: 100px;
@@ -237,11 +241,12 @@ div.header {
         top: 70px;
         left: 0;
         right: 10px;
-        margin: 5px;
         text-align: center;
         width: 100%;
-        background: #111;
-        margin: 5px; } }
+        background: #111; } }
+    @media screen and (max-width: 500px) {
+      div.header .course-menu {
+        top: 50px; } }
     div.header .course-menu li {
       position: relative;
       margin-top: 15px;
@@ -254,7 +259,6 @@ div.header {
           padding: 5px;
           margin: 5px;
           border-radius: 0;
-          background: #ff0;
           box-shadow: none;
           color: #fff; } }
   div.header .signin-menu {
@@ -263,11 +267,32 @@ div.header {
     padding: 10px;
     position: absolute;
     right: 0px; }
+    @media screen and (max-width: 800px) {
+      div.header .signin-menu {
+        display: none;
+        z-index: 15;
+        top: 70px;
+        left: 0;
+        right: 10px;
+        text-align: center;
+        width: 100%;
+        background: #111; } }
+    @media screen and (max-width: 500px) {
+      div.header .signin-menu {
+        top: 50px; } }
     div.header .signin-menu li {
       margin-top: 15px;
       padding: 15px 20px 30px 10px;
       font-size: 2.5em;
       top: 100px; }
+      @media screen and (max-width: 800px) {
+        div.header .signin-menu li {
+          font-size: 2.2em;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 0;
+          box-shadow: none;
+          color: #fff; } }
 
 div.footer {
   margin-top: 70px;

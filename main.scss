@@ -157,6 +157,7 @@ div.header {
         }
     }
     .menu {
+        opacity: 0;
         margin-right: 40px;
         padding-top: 12px;
         position: absolute;
@@ -170,6 +171,9 @@ div.header {
             text-align: center;
             width: 100%;
             background: #111;
+        }
+        @media screen and (max-width: 500px) {
+            top: 50px;
         }
     }
     li {
@@ -219,11 +223,12 @@ div.header {
             top: 70px;
             left: 0;
             right: 10px;
-            margin: 5px;
             text-align: center;
             width: 100%;
             background: #111;
-            margin: 5px;
+        }
+        @media screen and (max-width: 500px) {
+            top: 50px;
         }
         li {
             position: relative;
@@ -236,7 +241,6 @@ div.header {
                 padding: 5px;
                 margin: 5px;
                 border-radius: 0;
-                background: #ff0;
                 box-shadow: none;
                 color: #fff;
             }
@@ -250,12 +254,32 @@ div.header {
         padding: 10px;
         position: absolute;
         right: 0px;
-
+        @media screen and (max-width: 800px) {
+            display: none;
+            z-index: 15;
+            top: 70px;
+            left: 0;
+            right: 10px;
+            text-align: center;
+            width: 100%;
+            background: #111;
+        }
+        @media screen and (max-width: 500px) {
+            top: 50px;
+        }
         li {
             margin-top: 15px;
             padding: 15px 20px 30px 10px;
             font-size: 2.5em;
             top: 100px;
+            @media screen and (max-width: 800px) {
+                font-size: 2.2em;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 0;
+                box-shadow: none;
+                color: #fff;
+            }
             &:hover {
             }
         }

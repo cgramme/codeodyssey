@@ -1,5 +1,5 @@
 $(window).resize(function(){
-	$('.menu').show();
+	if($(window).width()>800){listSetup();}else{$('.menu, .course-menu, .signin-menu').hide();}
 });
 $(window).load(function(){
 	showText("#msg", "<Code Odessey/>", 0, 100);
@@ -11,7 +11,14 @@ $(document).ready(function(){
 	$('.course-menu').on('click mouseleave', function(){listIn($('.menu li'), 0, 50);listOut($('.course-menu li'), 0, 50);});
 	$('.signin-menu').on('click mouseleave', function(){listIn($('.menu li'), 0, 50);listOut($('.signin-menu li'), 0, 50);});
 	//tablet/phone size menu display
-	$('.menu-button').on('click', function(){$('.menu').slideToggle(200);});
+	$('.menu-button').on('click', function(){
+		if($('.menu').is(":visible")){
+			listOut($('.menu li'), 0, 50);
+		}else{
+			listIn($('.menu li'), 0, 50);
+		}
+		
+	});
 	//Course buttons on hover
     $('.html-basics').mouseover(function() {
 		buttonAnimate("Learn the basic principles of the foundational web language HTML.", this);
@@ -97,6 +104,10 @@ function listIn (list, index, interval) {
 function listSetup () {
 	listOut($('.course-menu li'), 0, 0);
 	listOut($('.signin-menu li'), 0, 0);
-	listIn($('.menu li'), 0, 200);
-	setTimeout(function () {$('.course-menu, .signin-menu').css({"opacity":"1"});}, 500);
+	if($(window).width()>800){
+		listIn($('.menu li'), 0, 200);
+	}else{
+		listOut($('.menu li'), 0, 0);
+	}
+	setTimeout(function () {$('.course-menu, .signin-menu, .menu').css({"opacity":"1"});}, 500);
 }
