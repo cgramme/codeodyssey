@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$('.signin-menu').on('click mouseleave', function(){listIn($('.menu li'), 0, 50);listOut($('.signin-menu li'), 0, 50);});
 	//tablet/phone size menu display
 	$('.menu-button').on('click', function(){
-		if($('.menu, .course-menu, signin-menu').is(":visible")){
+		if($('.menu, .course-menu, .signin-menu').is(":visible")){
 			listOut($('.menu li'), 0, 50);
 			listOut($('.signin-menu li'), 0, 50);
 			listOut($('.course-menu li'), 0, 50);
