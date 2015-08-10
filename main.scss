@@ -99,10 +99,12 @@ html, body {
 div.header {
     width: 100%;
     height: 60px;
-    @media screen and (max-width: 500px){
-        height: 40px;
-        padding-bottom: 10px;
+    @media screen and (max-width: 800px){
+        height: 70px;
         background: #111;
+    }
+    @media screen and (max-width: 500px) {
+        height: 50px;
     }
     h1 {
         color: #fff;
@@ -170,10 +172,12 @@ div.header {
             right: 0;
             text-align: center;
             width: 100%;
-            background: #111;
+            background-color: hsla(360, 100%, 0%, 0.9);
         }
         @media screen and (max-width: 500px) {
             top: 50px;
+            border-bottom: 2px solid #333;
+            box-shadow: 0 0 30px 0 #000;
         }
     }
     li {
@@ -194,11 +198,21 @@ div.header {
             @media screen and (max-width: 800px) {
                 font-size: 3em;
                 padding: 20px;
-                margin: 5px;
+                margin: 0px 5px 10px 5px;
                 border-radius: 0;
-                background: transparent;
+                border-radius: 5px;
                 box-shadow: none;
-                color: #fff;
+                &:hover {
+                color: #999;
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+                background-color: #2781C6;
+                -webkit-transition: -webkit-transform 0.1s;
+                transition: transform 0.1s;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                
             }
            
             &:hover {
@@ -238,11 +252,12 @@ div.header {
             top: 100px;
             @media screen and (max-width: 800px) {
                 font-size: 2.2em;
-                padding: 5px;
+                padding: 20px;
                 margin: 5px;
-                border-radius: 0;
+                border-radius: 10px;
                 box-shadow: none;
-                color: #fff;
+                color: #555;
+                text-shadow: 1px 1px 1px #999;
             }
             &:hover {
             }
@@ -274,11 +289,12 @@ div.header {
             top: 100px;
             @media screen and (max-width: 800px) {
                 font-size: 2.2em;
-                padding: 5px;
+                padding: 20px;
                 margin: 5px;
-                border-radius: 0;
+                border-radius: 10px;
                 box-shadow: none;
-                color: #fff;
+                color: #555;
+                text-shadow: 1px 1px 1px #999;
             }
             &:hover {
             }
@@ -324,7 +340,7 @@ div.wrapper {
                 padding: 0;
             }
     @media screen and (max-width: 800px) {
-        margin: 10px auto 0 auto;
+        margin: 0 auto;
         width: 100%;
     }
     @media screen and (max-width: 500px) {
@@ -511,8 +527,10 @@ div.wrapper {
         border-radius: 20px;
      }
      @media screen and (max-width: 800px){
-        border-radius: 10px;
         box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
+        @include linear-gradient(150deg, #666, #333);
+        border-top: 1px solid #999;
+        border-left: 1px solid #888;
      }
      h4.info-text1 {
         font-size: 6em;
@@ -577,7 +595,6 @@ div.wrapper {
     display: block;
     padding: 20px;
     height: 170px;
-    box-shadow: 0px 0px 5px 0px #000;
     box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
     @media screen and (max-width: 1100px) {
         border-radius: 20px;
@@ -585,6 +602,12 @@ div.wrapper {
     }
     @media screen and (max-width: 800px) {
         border-radius: 10px;
+    }
+    @media screen and (max-width: 500px) {
+        box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
+        @include linear-gradient(150deg, #555, #222);
+        border-top: 1px solid #999;
+        border-left: 1px solid #888;
     }
 }
 .compass {
