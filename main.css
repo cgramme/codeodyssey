@@ -194,12 +194,12 @@ div.header {
         right: 0;
         text-align: center;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9); } }
+        background-color: #111;
+        border-bottom: 2px solid #999;
+        box-shadow: 0 0 30px 0 #000; } }
     @media screen and (max-width: 500px) {
       div.header .menu {
-        top: 50px;
-        border-bottom: 2px solid #333;
-        box-shadow: 0 0 30px 0 #000; } }
+        top: 50px; } }
   div.header li {
     position: relative;
     top: 100px;
@@ -253,7 +253,11 @@ div.header {
         right: 10px;
         text-align: center;
         width: 100%;
-        background: #111; } }
+        background: #111;
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 2px solid #333;
+        box-shadow: 0 0 30px 0 #000; } }
     @media screen and (max-width: 500px) {
       div.header .course-menu {
         top: 50px; } }
@@ -272,6 +276,8 @@ div.header {
           box-shadow: none;
           color: #555;
           text-shadow: 1px 1px 1px #999; } }
+      div.header .course-menu li:hover {
+        color: #fff; }
   div.header .signin-menu {
     opacity: 0;
     margin-right: 250px;
@@ -287,7 +293,11 @@ div.header {
         right: 10px;
         text-align: center;
         width: 100%;
-        background: #111; } }
+        background: #111;
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 2px solid #555;
+        box-shadow: 0 0 30px 0 #000; } }
     @media screen and (max-width: 500px) {
       div.header .signin-menu {
         top: 50px; } }
@@ -305,6 +315,8 @@ div.header {
           box-shadow: none;
           color: #555;
           text-shadow: 1px 1px 1px #999; } }
+      div.header .signin-menu li:hover {
+        color: #fff; }
 
 div.footer {
   margin-top: 70px;
