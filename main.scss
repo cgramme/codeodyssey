@@ -617,8 +617,8 @@ div.wrapper {
     @media screen and (max-width: 500px) {
         box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
         @include linear-gradient(150deg, #555, #222);
-        border-top: 1px solid #999;
-        border-left: 1px solid #888;
+        border-top: 1px solid #666;
+        border-left: 1px solid #555;
     }
 }
 .compass {

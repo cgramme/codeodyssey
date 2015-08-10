@@ -614,8 +614,8 @@ div.wrapper {
       background: -o-linear-gradient(150deg, #555, #222);
       background: -moz-linear-gradient(150deg, #555, #222);
       background: linear-gradient(150deg, #555, #222);
-      border-top: 1px solid #999;
-      border-left: 1px solid #888; } }
+      border-top: 1px solid #666;
+      border-left: 1px solid #555; } }
 
 .compass {
   float: left;

@@ -13,7 +13,7 @@ $(document).ready(function(){
 	//tablet/phone size menu display
 	$('.menu-button').on('click', function(){
 		if($('.menu').is(":visible")){
-			listOut($('.menu li'), 0, 50);
+			listOut($('.menu li, .signin-menu li, .course-menu li'), 0, 50);
 		}else{
 			listIn($('.menu li'), 0, 50);
 		}
