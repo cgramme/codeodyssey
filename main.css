@@ -401,10 +401,10 @@ div.wrapper {
     padding: 40px 10px 100px 10px;
     border-radius: 110px 20px 20px 250px;
     box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000;
-    background: -webkit-linear-gradient(90deg, #eee, #999);
-    background: -o-linear-gradient(90deg, #eee, #999);
-    background: -moz-linear-gradient(90deg, #eee, #999);
-    background: linear-gradient(90deg, #eee, #999); }
+    background: -webkit-linear-gradient(90deg, #ccc, #777);
+    background: -o-linear-gradient(90deg, #ccc, #777);
+    background: -moz-linear-gradient(90deg, #ccc, #777);
+    background: linear-gradient(90deg, #ccc, #777); }
     @media screen and (max-width: 1100px) {
       div.wrapper div.side-menu {
         margin-bottom: 10px;
@@ -456,15 +456,14 @@ div.wrapper {
           background-size: 100% 100%;
           font-size: 3em;
           padding: 10px;
-          border: 2px solid #555;
-          box-shadow: 2px 2px 10px 0 #000, inset 0 0 1px 1px #aaa;
+          border: 1px solid #555;
+          box-shadow: inset 1px 1px 4px 1px #666, 1px 1px 1px 1px #fff;
           cursor: pointer;
           display: table-cell; }
           div.wrapper div.side-menu ul li div:hover {
             -webkit-animation: buttonZoom 0.5s forwards;
             animation: buttonZoom 0.5s forwards;
-            box-shadow: 2px 2px 12px 0px #000;
-            border: 2px solid transparent; }
+            box-shadow: 1px 1px 10px 0px #000; }
           @media screen and (max-width: 900px) {
             div.wrapper div.side-menu ul li div {
               width: 220px; } }
