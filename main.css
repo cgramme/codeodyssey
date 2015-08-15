@@ -442,7 +442,7 @@ div.wrapper {
     text-align: center;
     color: #999;
     font-size: 2.5em;
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 1px #000;
     margin-bottom: 5px; }
     @media screen and (max-width: 1000px) {
       div.wrapper h4 {
@@ -518,7 +518,7 @@ div.wrapper {
     div.wrapper div.side-menu h4 {
       font-size: 6em;
       color: #444;
-      font-weight: bold;
+      font-weight: normal;
       text-shadow: 1px 1px 1px #fff; }
       @media screen and (max-width: 500px) {
         div.wrapper div.side-menu h4 {
