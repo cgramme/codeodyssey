@@ -93,6 +93,13 @@ html, body {
   to {
     top: 0;
     background-color: #000; } }
+@keyframes menuHoverAnima {
+  from {
+    top: 0;
+    background-color: #fff; }
+  to {
+    top: 0;
+    background-color: #000; } }
 @keyframes listOutAnima {
   from {
     top: 0; }
@@ -113,6 +120,16 @@ html, body {
     top: 100px; }
   to {
     top: 0; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .list-out-anima {
   -webkit-animation: listOutAnima 0.2s forwards;
   animation: listOutAnima 0.2s forwards; }
@@ -131,6 +148,7 @@ div.header {
     div.header {
       height: 50px; } }
   div.header h1 {
+    opacity: 0;
     font-family: 'Abel', sans-serif;
     color: #fff;
     padding: 7px;
@@ -148,6 +166,7 @@ div.header {
         font-size: 3em;
         padding-top: 15px; } }
   div.header img {
+    opacity: 0;
     height: 70px;
     width: 70px;
     float: right;
@@ -160,6 +179,7 @@ div.header {
         height: 50px;
         width: 50px; } }
   div.header div.menu-button {
+    opacity: 0;
     color: #fff;
     font-size: 10em;
     float: right;
@@ -324,6 +344,7 @@ div.header {
         color: #fff; }
 
 div.footer {
+  display: none;
   margin-top: 70px;
   background: -webkit-linear-gradient(90deg, #333, #444);
   background: -o-linear-gradient(90deg, #333, #444);
@@ -345,7 +366,34 @@ div.footer {
       div.footer h2 {
         font-size: 1.5em; } }
 
+#msg {
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -250px;
+  color: #fff;
+  font-size: 9em;
+  text-shadow: 1px 1px 2px #000;
+  font-weight: bold;
+  display: block; }
+  @media screen and (max-width: 500px) {
+    #msg {
+      width: 350px;
+      margin-left: -175px;
+      margin-top: -20px;
+      font-size: 5em; } }
+  @media screen and (max-width: 350px) {
+    #msg {
+      margin-left: -150px;
+      font-size: 4em;
+      width: 300px; } }
+
 .coming-soon-text {
+  display: none;
   margin: 60px 10px 0 10px;
   text-align: center;
   color: #fff;
@@ -405,11 +453,13 @@ div.wrapper {
     text-align: center;
     padding: 40px 10px 100px 10px;
     border-radius: 110px 20px 20px 250px;
-    box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 50px 0px #888;
-    background: -webkit-linear-gradient(90deg, #eee, #999);
-    background: -o-linear-gradient(90deg, #eee, #999);
-    background: -moz-linear-gradient(90deg, #eee, #999);
-    background: linear-gradient(90deg, #eee, #999); }
+    box-shadow: 1px 1px 5px 1px #000, 0 0 2px 2px #fff, inset 0 0 50px 0 #999;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    background: -webkit-linear-gradient(90deg, #ddd, #999);
+    background: -o-linear-gradient(90deg, #ddd, #999);
+    background: -moz-linear-gradient(90deg, #ddd, #999);
+    background: linear-gradient(90deg, #ddd, #999); }
     @media screen and (max-width: 1100px) {
       div.wrapper div.side-menu {
         margin-bottom: 10px;
@@ -513,7 +563,7 @@ div.wrapper {
           font-size: 3em;
           padding: 10px;
           border: 1px solid #999;
-          box-shadow: inset 1px 1px 5px 1px #666, 1px 1px 2px 3px #fff;
+          box-shadow: inset 1px 1px 5px 1px #666, 1px 1px 2px 2px #fff;
           cursor: pointer;
           display: table-cell; }
           div.wrapper div.side-menu ul li div:hover {
@@ -638,7 +688,13 @@ div.wrapper {
       background: -moz-linear-gradient(150deg, #bbb, #999);
       background: linear-gradient(150deg, #bbb, #999); }
 
+.fade-in {
+  -webkit-animation: fadeIn 1.2s forwards;
+  animation: fadeIn 1.2s forwards; }
+
 .white-background {
+  opacity: 0;
+  display: none;
   position: relative;
   z-index: 10;
   background: #fff;
@@ -653,7 +709,6 @@ div.wrapper {
 .dark-background {
   background: url(images/dark_texture.jpg);
   border-radius: 110px 20px 20px 110px;
-  display: block;
   padding: 20px;
   height: 170px;
   box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 30px 7px #000; }

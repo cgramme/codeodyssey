@@ -2,8 +2,14 @@ $(window).resize(function(){
 	if($(window).width()>800){listSetup();}else{$('.menu, .course-menu, .signin-menu').hide();}
 });
 $(window).load(function(){
+	$('.white-background').show();
+	setTimeout(function(){
+		$('#msg').hide();
+		$('div.footer, .coming-soon-text').show();
+		$('.white-background, .header h1, .header img, .header .menu-button').addClass('fade-in');
+		setTimeout(function(){listSetup();}, 500);
+	}, 2000);
 	showText("#msg", "<Code Odessey/>", 0, 100);
-	listSetup();
 });
 $(document).ready(function(){
 	$('.menu .courses').on('click',function(){listOut($('.menu li'), 0, 50);listIn($('.course-menu li'), 0, 50);});
