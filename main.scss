@@ -666,6 +666,9 @@ div.wrapper {
             font-size: 3em;
             width: 250px;
         }
+        @media screen and (max-width: 500px) {
+            width: 200px;
+        }
      }
      button {
         width: 200px;

@@ -669,6 +669,9 @@ div.wrapper {
       .information input {
         font-size: 3em;
         width: 250px; } }
+    @media screen and (max-width: 500px) {
+      .information input {
+        width: 200px; } }
   .information button {
     width: 200px;
     padding: 15px 5px;
