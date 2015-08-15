@@ -126,16 +126,15 @@ div.header {
   height: 60px; }
   @media screen and (max-width: 800px) {
     div.header {
-      background-color: rgba(0, 0, 0, 0.5);
       height: 70px; } }
   @media screen and (max-width: 500px) {
     div.header {
       height: 50px; } }
   div.header h1 {
+    font-family: 'Abel', sans-serif;
     color: #fff;
     padding: 7px;
-    padding-top: 13px;
-    font-size: 6em;
+    font-size: 7em;
     text-shadow: 1px 1px 2px #000;
     font-weight: bold;
     cursor: pointer;

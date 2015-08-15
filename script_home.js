@@ -20,7 +20,7 @@ $(document).ready(function(){
 			listIn($('.menu li'), 0, 50);
 		}
 	});
-	//JSlide slideshow
+	//JSlide slideshow array
 	var _SlideshowTransitions = [
             //Custom slide show transitions. You can add as many as you like. Will start from top first.
             {$Duration:600,x:-1,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}
