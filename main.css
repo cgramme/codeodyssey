@@ -126,6 +126,7 @@ div.header {
   height: 60px; }
   @media screen and (max-width: 800px) {
     div.header {
+      background-color: rgba(0, 0, 0, 0.5);
       height: 70px; } }
   @media screen and (max-width: 500px) {
     div.header {
@@ -135,7 +136,7 @@ div.header {
     padding: 7px;
     padding-top: 13px;
     font-size: 6em;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 1px 1px 2px #000;
     font-weight: bold;
     cursor: pointer;
     display: inline-block; }
@@ -417,7 +418,7 @@ div.wrapper {
     @media screen and (max-width: 800px) {
       div.wrapper div.side-menu {
         border-radius: 10px;
-        box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
+        box-shadow: 1px 1px 5px 1px #444, 0 0 2px 2px #fff;
         margin-top: 20px;
         padding-bottom: 40px;
         border-top: 1px solid #fff;
@@ -439,6 +440,7 @@ div.wrapper {
         padding-top: 10px;
         text-shadow: 1px 1px 1px #fff; }
       div.wrapper div.side-menu .slide-show p {
+        text-indent: 20px;
         color: #333;
         text-shadow: 1px 1px 1px #fff;
         font-size: 3em;
@@ -466,9 +468,9 @@ div.wrapper {
           height: 360px; }
     div.wrapper div.side-menu h4 {
       font-size: 6em;
-      color: #555;
+      color: #444;
       font-weight: bold;
-      text-shadow: 1px 1px 2px #fff; }
+      text-shadow: 1px 1px 1px #fff; }
       @media screen and (max-width: 500px) {
         div.wrapper div.side-menu h4 {
           font-size: 4em; } }
@@ -512,13 +514,13 @@ div.wrapper {
           font-size: 3em;
           padding: 10px;
           border: 1px solid #999;
-          box-shadow: inset 1px 1px 4px 1px #666, 1px 1px 3px 1px #fff;
+          box-shadow: inset 1px 1px 5px 1px #666, 1px 1px 2px 3px #fff;
           cursor: pointer;
           display: table-cell; }
           div.wrapper div.side-menu ul li div:hover {
             -webkit-animation: buttonZoom 0.5s forwards;
             animation: buttonZoom 0.5s forwards;
-            box-shadow: 1px 1px 10px 0px #000; }
+            box-shadow: 2px 2px 7px 0px #000; }
           @media screen and (max-width: 900px) {
             div.wrapper div.side-menu ul li div {
               width: 220px; } }
@@ -647,8 +649,7 @@ div.wrapper {
   @media screen and (max-width: 800px) {
     .white-background {
       border-radius: 0;
-      padding: 20px 10px;
-      box-shadow: none; } }
+      padding: 20px 10px; } }
 
 .dark-background {
   background: url(images/dark_texture.jpg);
@@ -656,7 +657,7 @@ div.wrapper {
   display: block;
   padding: 20px;
   height: 170px;
-  box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 3px 2px #000; }
+  box-shadow: 1px 1px 5px 1px #000, inset 0 0 0px 2px #fff, inset 0 0 30px 7px #000; }
   @media screen and (max-width: 1100px) {
     .dark-background {
       border-radius: 20px;
@@ -664,9 +665,9 @@ div.wrapper {
   @media screen and (max-width: 800px) {
     .dark-background {
       border-radius: 10px;
-      box-shadow: 1px 1px 5px 2px #000, 0 0 2px 2px #fff;
-      border-top: 1px solid #999;
-      border-left: 1px solid #888; } }
+      box-shadow: 2px 2px 5px 2px #777, 0 0 2px 2px #fff, inset 0 0 5px 0 #000;
+      border-top: 1px solid #000;
+      border-left: 1px solid #000; } }
 
 .compass {
   float: left;
