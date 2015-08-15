@@ -19,8 +19,24 @@ $(document).ready(function(){
 		}else{
 			listIn($('.menu li'), 0, 50);
 		}
-		
 	});
+	//JSlide slideshow
+	var _SlideshowTransitions = [
+            //Custom slide show transitions. You can add as many as you like. Will start from top first.
+            {$Duration:600,x:-1,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}
+	  ];
+      //slideshow object
+        var options = {
+            $AutoPlay: true,
+            $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: _SlideshowTransitions,
+                $TransitionsOrder: 1,
+                $ShowLink: true
+            }
+        };
+        //start slideshow
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 	//Course buttons on hover
     $('.html-basics').mouseover(function() {
 		buttonAnimate("Learn the basic principles of the foundational web language HTML.", this);
