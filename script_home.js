@@ -9,7 +9,7 @@ $(window).load(function(){
 		$('.white-background, .header h1, .header img, .header .menu-button').addClass('fade-in');
 		setTimeout(function(){listSetup();}, 500);
 	}, 2000);
-	showText("#msg", "<Code Odessey/>", 0, 100);
+	showText("#msg", "<Code Odyssey/>", 0, 100);
 });
 $(document).ready(function(){
 	$('.menu .courses').on('click',function(){listOut($('.menu li'), 0, 50);listIn($('.course-menu li'), 0, 50);});
